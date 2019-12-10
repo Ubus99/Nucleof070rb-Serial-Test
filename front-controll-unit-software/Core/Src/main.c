@@ -217,25 +217,6 @@ void sendSerialMessage(char message) {
 	HAL_UART_Transmit(&huart2, (uint8_t*) message, strlen(message), 0xffff);
 }
 
-void HAL_UART_MspInit(UART_HandleTypeDef *huart) {
-	GPIO_InitTypeDef GPIO_InitStruct;
-	if (huart->Instance == USART2) {
-		__GPIOA_CLK_ENABLE();
-		__USART2_CLK_ENABLE();
-
-		/**USART2 GPIO Configuration
-		 PA2     ------> USART2_TX
-		 PA3     ------> USART2_RX
-		 */
-		GPIO_InitStruct.Pin = GPIO_PIN_2 | GPIO_PIN_3;
-		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_NOPULL;
-		GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
-		GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
-		HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-	}
-}
-
 /* USER CODE END 4 */
 
 /**

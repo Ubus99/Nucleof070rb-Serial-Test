@@ -98,7 +98,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-		if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_2) == 0) {
+		if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_2) == 1) {
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 		} else {
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);

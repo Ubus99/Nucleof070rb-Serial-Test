@@ -1,0 +1,78 @@
+\hypertarget{struct_f_l_a_s_h___process_type_def}{}\doxysection{F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def Struct Reference}
+\label{struct_f_l_a_s_h___process_type_def}\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+
+
+F\+L\+A\+SH handle Structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+flash.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{F\+L\+A\+S\+H\+\_\+\+Procedure\+Type\+Def}} \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def_adcc5fdaba7d53dffdab0510a4dd7d179}{Procedure\+On\+Going}}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def_afa5ed8957c6ebd485308c38b155fcb39}{Data\+Remaining}}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def_a680a9b907eb67c762b16ef7051cd8942}{Address}}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint64\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def_ac696cb353ee424a54d034dea1a03c624}{Data}}
+\item 
+\mbox{\hyperlink{stm32f0xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def_ab5892cd1aacb0c0304b40f57023061e2}{Lock}}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def_a8a6cc581b8b180090429d0a3c0ca0172}{Error\+Code}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+F\+L\+A\+SH handle Structure definition ~\newline
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_f_l_a_s_h___process_type_def_a680a9b907eb67c762b16ef7051cd8942}\label{struct_f_l_a_s_h___process_type_def_a680a9b907eb67c762b16ef7051cd8942}} 
+\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}!Address@{Address}}
+\index{Address@{Address}!FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+\doxysubsubsection{\texorpdfstring{Address}{Address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def\+::\+Address}
+
+Internal variable to save address selected for program or erase \mbox{\Hypertarget{struct_f_l_a_s_h___process_type_def_ac696cb353ee424a54d034dea1a03c624}\label{struct_f_l_a_s_h___process_type_def_ac696cb353ee424a54d034dea1a03c624}} 
+\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}!Data@{Data}}
+\index{Data@{Data}!FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint64\+\_\+t F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def\+::\+Data}
+
+Internal variable to save data to be programmed \mbox{\Hypertarget{struct_f_l_a_s_h___process_type_def_afa5ed8957c6ebd485308c38b155fcb39}\label{struct_f_l_a_s_h___process_type_def_afa5ed8957c6ebd485308c38b155fcb39}} 
+\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}!DataRemaining@{DataRemaining}}
+\index{DataRemaining@{DataRemaining}!FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+\doxysubsubsection{\texorpdfstring{DataRemaining}{DataRemaining}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def\+::\+Data\+Remaining}
+
+Internal variable to save the remaining pages to erase or half-\/word to program in IT context \mbox{\Hypertarget{struct_f_l_a_s_h___process_type_def_a8a6cc581b8b180090429d0a3c0ca0172}\label{struct_f_l_a_s_h___process_type_def_a8a6cc581b8b180090429d0a3c0ca0172}} 
+\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def\+::\+Error\+Code}
+
+F\+L\+A\+SH error code ~\newline
+ This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h___error___codes}{F\+L\+A\+SH Error Codes}} ~\newline
+ \mbox{\Hypertarget{struct_f_l_a_s_h___process_type_def_ab5892cd1aacb0c0304b40f57023061e2}\label{struct_f_l_a_s_h___process_type_def_ab5892cd1aacb0c0304b40f57023061e2}} 
+\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32f0xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def\+::\+Lock}
+
+F\+L\+A\+SH locking object ~\newline
+ \mbox{\Hypertarget{struct_f_l_a_s_h___process_type_def_adcc5fdaba7d53dffdab0510a4dd7d179}\label{struct_f_l_a_s_h___process_type_def_adcc5fdaba7d53dffdab0510a4dd7d179}} 
+\index{FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}!ProcedureOnGoing@{ProcedureOnGoing}}
+\index{ProcedureOnGoing@{ProcedureOnGoing}!FLASH\_ProcessTypeDef@{FLASH\_ProcessTypeDef}}
+\doxysubsubsection{\texorpdfstring{ProcedureOnGoing}{ProcedureOnGoing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{F\+L\+A\+S\+H\+\_\+\+Procedure\+Type\+Def}} F\+L\+A\+S\+H\+\_\+\+Process\+Type\+Def\+::\+Procedure\+On\+Going}
+
+Internal variable to indicate which procedure is ongoing or not in IT context 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Drivers/\+S\+T\+M32\+F0xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32f0xx__hal__flash_8h}{stm32f0xx\+\_\+hal\+\_\+flash.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,389 @@
+\hypertarget{group___p_w_r___exported___functions___group2}{}\doxysection{Peripheral Control functions}
+\label{group___p_w_r___exported___functions___group2}\index{Peripheral Control functions@{Peripheral Control functions}}
+
+
+Low Power modes configuration functions.  
+
+
+Collaboration diagram for Peripheral Control functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{group___p_w_r___exported___functions___group2}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga3d07cef39bf294db4aed7e06e5dbf9af}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Bk\+Up\+Access}} (void)
+\begin{DoxyCompactList}\small\item\em Enables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga1513de5f2e4b72e094fb04bab786fec8}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Bk\+Up\+Access}} (void)
+\begin{DoxyCompactList}\small\item\em Disables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gaa76f42833a89110293f687b034164916}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\begin{DoxyCompactList}\small\item\em Enables the Wake\+Up P\+I\+Nx functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gab12ca816929e23e36f5ed8f4ccdb1472}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\begin{DoxyCompactList}\small\item\em Disables the Wake\+Up P\+I\+Nx functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gacfca5f1062274423e08317c0a5a225fa}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+O\+P\+Mode}} (uint32\+\_\+t Regulator, uint8\+\_\+t S\+T\+O\+P\+Entry)
+\begin{DoxyCompactList}\small\item\em Enters S\+T\+OP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga5c84f4e046525c22d233c8a3443fab5f}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+L\+E\+E\+P\+Mode}} (uint32\+\_\+t Regulator, uint8\+\_\+t S\+L\+E\+E\+P\+Entry)
+\begin{DoxyCompactList}\small\item\em Enters Sleep mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga40736f74c169077fcd08f34470559aa2}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+A\+N\+D\+B\+Y\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enters S\+T\+A\+N\+D\+BY mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga85d0154c96068b286072a64fca4c7e6a}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Indicates Sleep-\/\+On-\/\+Exit when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga1da299e8186a3e08a694865bd41c3bb0}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Disables Sleep-\/\+On-\/\+Exit feature when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga6f33b1c8c8cc85129c68ac302a281033}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+S\+E\+V\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Enables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga7811014def9b864dd490a63ada4bab68}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+S\+E\+V\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Disables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Low Power modes configuration functions. 
+
+\begin{DoxyVerb} ===============================================================================
+                 ##### Peripheral Control functions #####
+ ===============================================================================
+    
+    *** WakeUp pin configuration ***
+    ================================
+    [..]
+      (+) WakeUp pin is used to wakeup the system from Standby mode. This pin is
+          forced in input pull down configuration and is active on rising edges.
+      (+) There are two WakeUp pins, and up to eight Wakeup pins on STM32F07x & STM32F09x devices.
+         (++)WakeUp Pin 1 on PA.00.
+         (++)WakeUp Pin 2 on PC.13.
+         (++)WakeUp Pin 3 on PE.06.(STM32F07x/STM32F09x)
+         (++)WakeUp Pin 4 on PA.02.(STM32F07x/STM32F09x)
+         (++)WakeUp Pin 5 on PC.05.(STM32F07x/STM32F09x)
+         (++)WakeUp Pin 6 on PB.05.(STM32F07x/STM32F09x)
+         (++)WakeUp Pin 7 on PB.15.(STM32F07x/STM32F09x)
+         (++)WakeUp Pin 8 on PF.02.(STM32F07x/STM32F09x)
+
+    *** Low Power modes configuration ***
+    =====================================
+    [..]
+      The devices feature 3 low-power modes:
+      (+) Sleep mode: Cortex-M0 core stopped, peripherals kept running.
+      (+) Stop mode: all clocks are stopped, regulator running, regulator
+          in low power mode
+      (+) Standby mode: 1.2V domain powered off (mode not available on STM32F0x8 devices).
+
+   *** Sleep mode ***
+   ==================
+    [..]
+      (+) Entry:
+          The Sleep mode is entered by using the HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFx)
+              functions with
+          (++) PWR_SLEEPENTRY_WFI: enter SLEEP mode with WFI instruction
+          (++) PWR_SLEEPENTRY_WFE: enter SLEEP mode with WFE instruction
+     
+      (+) Exit:
+        (++) Any peripheral interrupt acknowledged by the nested vectored interrupt
+              controller (NVIC) can wake up the device from Sleep mode.
+
+   *** Stop mode ***
+   =================
+    [..]
+      In Stop mode, all clocks in the 1.8V domain are stopped, the PLL, the HSI,
+      and the HSE RC oscillators are disabled. Internal SRAM and register contents
+      are preserved.
+      The voltage regulator can be configured either in normal or low-power mode.
+      To minimize the consumption.
+
+      (+) Entry:
+          The Stop mode is entered using the HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI )
+             function with:
+          (++) Main regulator ON.
+          (++) Low Power regulator ON.
+          (++) PWR_STOPENTRY_WFI: enter STOP mode with WFI instruction
+          (++) PWR_STOPENTRY_WFE: enter STOP mode with WFE instruction
+      (+) Exit:
+          (++) Any EXTI Line (Internal or External) configured in Interrupt/Event mode.
+          (++) Some specific communication peripherals (CEC, USART, I2C) interrupts, 
+               when programmed in wakeup mode (the peripheral must be 
+               programmed in wakeup mode and the corresponding interrupt vector 
+               must be enabled in the NVIC)
+
+   *** Standby mode ***
+   ====================
+     [..]
+      The Standby mode allows to achieve the lowest power consumption. It is based
+      on the Cortex-M0 deep sleep mode, with the voltage regulator disabled.
+      The 1.8V domain is consequently powered off. The PLL, the HSI oscillator and
+      the HSE oscillator are also switched off. SRAM and register contents are lost
+      except for the RTC registers, RTC backup registers and Standby circuitry.
+      The voltage regulator is OFF.
+
+      (+) Entry:
+          (++) The Standby mode is entered using the HAL_PWR_EnterSTANDBYMode() function.
+      (+) Exit:
+          (++) WKUP pin rising edge, RTC alarm (Alarm A), RTC wakeup,
+               tamper event, time-stamp event, external reset in NRST pin, IWDG reset.
+
+   *** Auto-wakeup (AWU) from low-power mode ***
+   =============================================
+    [..]
+      The MCU can be woken up from low-power mode by an RTC Alarm event, an RTC
+      Wakeup event, a tamper event, a time-stamp event, or a comparator event, 
+      without depending on an external interrupt (Auto-wakeup mode).
+
+    (+) RTC auto-wakeup (AWU) from the Stop and Standby modes
+
+      (++) To wake up from the Stop mode with an RTC alarm event, it is necessary to
+            configure the RTC to generate the RTC alarm using the HAL_RTC_SetAlarm_IT() function.
+
+      (++) To wake up from the Stop mode with an RTC Tamper or time stamp event, it
+           is necessary to configure the RTC to detect the tamper or time stamp event using the
+           HAL_RTC_SetTimeStamp_IT() or HAL_RTC_SetTamper_IT() functions.
+
+      (++) To wake up from the Stop mode with an RTC WakeUp event, it is necessary to
+           configure the RTC to generate the RTC WakeUp event using the HAL_RTC_SetWakeUpTimer_IT() function.
+
+    (+) Comparator auto-wakeup (AWU) from the Stop mode
+
+      (++) To wake up from the Stop mode with a comparator wakeup event, it is necessary to:
+           (+++) Configure the EXTI Line associated with the comparator (example EXTI Line 22 for comparator 2) 
+                 to be sensitive to to the selected edges (falling, rising or falling 
+                 and rising) (Interrupt or Event modes) using the EXTI_Init() function.
+           (+++) Configure the comparator to generate the event.      
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga1513de5f2e4b72e094fb04bab786fec8}\label{group___p_w_r___exported___functions___group2_ga1513de5f2e4b72e094fb04bab786fec8}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_DisableBkUpAccess@{HAL\_PWR\_DisableBkUpAccess}}
+\index{HAL\_PWR\_DisableBkUpAccess@{HAL\_PWR\_DisableBkUpAccess}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_DisableBkUpAccess()}{HAL\_PWR\_DisableBkUpAccess()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Bk\+Up\+Access (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). 
+
+\begin{DoxyNote}{Note}
+If the H\+SE divided by 32 is used as the R\+TC clock, the Backup Domain Access should be kept enabled. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga7811014def9b864dd490a63ada4bab68}\label{group___p_w_r___exported___functions___group2_ga7811014def9b864dd490a63ada4bab68}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_DisableSEVOnPend@{HAL\_PWR\_DisableSEVOnPend}}
+\index{HAL\_PWR\_DisableSEVOnPend@{HAL\_PWR\_DisableSEVOnPend}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_DisableSEVOnPend()}{HAL\_PWR\_DisableSEVOnPend()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+S\+E\+V\+On\+Pend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. 
+
+\begin{DoxyNote}{Note}
+Clears S\+E\+V\+O\+N\+P\+E\+ND bit of S\+CR register. When this bit is set, this causes W\+FE to wake up when an interrupt moves from inactive to pended. ~\newline
+ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga1da299e8186a3e08a694865bd41c3bb0}\label{group___p_w_r___exported___functions___group2_ga1da299e8186a3e08a694865bd41c3bb0}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_DisableSleepOnExit@{HAL\_PWR\_DisableSleepOnExit}}
+\index{HAL\_PWR\_DisableSleepOnExit@{HAL\_PWR\_DisableSleepOnExit}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_DisableSleepOnExit()}{HAL\_PWR\_DisableSleepOnExit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Sleep\+On\+Exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables Sleep-\/\+On-\/\+Exit feature when returning from Handler mode to Thread mode. 
+
+\begin{DoxyNote}{Note}
+Clears S\+L\+E\+E\+P\+O\+N\+E\+X\+IT bit of S\+CR register. When this bit is set, the processor re-\/enters S\+L\+E\+EP mode when an interruption handling is over. ~\newline
+ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_gab12ca816929e23e36f5ed8f4ccdb1472}\label{group___p_w_r___exported___functions___group2_gab12ca816929e23e36f5ed8f4ccdb1472}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_DisableWakeUpPin@{HAL\_PWR\_DisableWakeUpPin}}
+\index{HAL\_PWR\_DisableWakeUpPin@{HAL\_PWR\_DisableWakeUpPin}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_DisableWakeUpPin()}{HAL\_PWR\_DisableWakeUpPin()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Wake\+Up\+Pin (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Wake\+Up\+Pinx }\end{DoxyParamCaption})}
+
+
+
+Disables the Wake\+Up P\+I\+Nx functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Wake\+Up\+Pinx} & Specifies the Power Wake-\/\+Up pin to disable. This parameter can be values of \+: \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins}{P\+W\+R\+Ex Wakeup Pins}} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga3d07cef39bf294db4aed7e06e5dbf9af}\label{group___p_w_r___exported___functions___group2_ga3d07cef39bf294db4aed7e06e5dbf9af}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnableBkUpAccess@{HAL\_PWR\_EnableBkUpAccess}}
+\index{HAL\_PWR\_EnableBkUpAccess@{HAL\_PWR\_EnableBkUpAccess}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnableBkUpAccess()}{HAL\_PWR\_EnableBkUpAccess()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Bk\+Up\+Access (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). 
+
+\begin{DoxyNote}{Note}
+If the H\+SE divided by 32 is used as the R\+TC clock, the Backup Domain Access should be kept enabled. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga6f33b1c8c8cc85129c68ac302a281033}\label{group___p_w_r___exported___functions___group2_ga6f33b1c8c8cc85129c68ac302a281033}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnableSEVOnPend@{HAL\_PWR\_EnableSEVOnPend}}
+\index{HAL\_PWR\_EnableSEVOnPend@{HAL\_PWR\_EnableSEVOnPend}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnableSEVOnPend()}{HAL\_PWR\_EnableSEVOnPend()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+S\+E\+V\+On\+Pend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. 
+
+\begin{DoxyNote}{Note}
+Sets S\+E\+V\+O\+N\+P\+E\+ND bit of S\+CR register. When this bit is set, this causes W\+FE to wake up when an interrupt moves from inactive to pended. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga85d0154c96068b286072a64fca4c7e6a}\label{group___p_w_r___exported___functions___group2_ga85d0154c96068b286072a64fca4c7e6a}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnableSleepOnExit@{HAL\_PWR\_EnableSleepOnExit}}
+\index{HAL\_PWR\_EnableSleepOnExit@{HAL\_PWR\_EnableSleepOnExit}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnableSleepOnExit()}{HAL\_PWR\_EnableSleepOnExit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Sleep\+On\+Exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Indicates Sleep-\/\+On-\/\+Exit when returning from Handler mode to Thread mode. 
+
+\begin{DoxyNote}{Note}
+Set S\+L\+E\+E\+P\+O\+N\+E\+X\+IT bit of S\+CR register. When this bit is set, the processor re-\/enters S\+L\+E\+EP mode when an interruption handling is over. Setting this bit is useful when the processor is expected to run only on interruptions handling. ~\newline
+ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_gaa76f42833a89110293f687b034164916}\label{group___p_w_r___exported___functions___group2_gaa76f42833a89110293f687b034164916}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnableWakeUpPin@{HAL\_PWR\_EnableWakeUpPin}}
+\index{HAL\_PWR\_EnableWakeUpPin@{HAL\_PWR\_EnableWakeUpPin}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnableWakeUpPin()}{HAL\_PWR\_EnableWakeUpPin()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Wake\+Up\+Pin (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Wake\+Up\+Pinx }\end{DoxyParamCaption})}
+
+
+
+Enables the Wake\+Up P\+I\+Nx functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Wake\+Up\+Pinx} & Specifies the Power Wake-\/\+Up pin to enable. This parameter can be value of \+: \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins}{P\+W\+R\+Ex Wakeup Pins}} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga5c84f4e046525c22d233c8a3443fab5f}\label{group___p_w_r___exported___functions___group2_ga5c84f4e046525c22d233c8a3443fab5f}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnterSLEEPMode@{HAL\_PWR\_EnterSLEEPMode}}
+\index{HAL\_PWR\_EnterSLEEPMode@{HAL\_PWR\_EnterSLEEPMode}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnterSLEEPMode()}{HAL\_PWR\_EnterSLEEPMode()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+L\+E\+E\+P\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Regulator,  }\item[{uint8\+\_\+t}]{S\+L\+E\+E\+P\+Entry }\end{DoxyParamCaption})}
+
+
+
+Enters Sleep mode. 
+
+\begin{DoxyNote}{Note}
+In Sleep mode, all I/O pins keep the same state as in Run mode. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Regulator} & Specifies the regulator state in S\+L\+E\+EP mode. On S\+T\+M32\+F0 devices, this parameter is a dummy value and it is ignored as regulator can\textquotesingle{}t be modified in this mode. Parameter is kept for platform compatibility. \\
+\hline
+{\em S\+L\+E\+E\+P\+Entry} & Specifies if S\+L\+E\+EP mode is entered with W\+FI or W\+FE instruction. When W\+FI entry is used, tick interrupt have to be disabled if not desired as the interrupt wake up source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FI\+: enter S\+L\+E\+EP mode with W\+FI instruction \item P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FE\+: enter S\+L\+E\+EP mode with W\+FE instruction \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_ga40736f74c169077fcd08f34470559aa2}\label{group___p_w_r___exported___functions___group2_ga40736f74c169077fcd08f34470559aa2}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnterSTANDBYMode@{HAL\_PWR\_EnterSTANDBYMode}}
+\index{HAL\_PWR\_EnterSTANDBYMode@{HAL\_PWR\_EnterSTANDBYMode}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnterSTANDBYMode()}{HAL\_PWR\_EnterSTANDBYMode()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+A\+N\+D\+B\+Y\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enters S\+T\+A\+N\+D\+BY mode. 
+
+\begin{DoxyNote}{Note}
+In Standby mode, all I/O pins are high impedance except for\+:
+\begin{DoxyItemize}
+\item Reset pad (still available)
+\item R\+TC alternate function pins if configured for tamper, time-\/stamp, R\+TC Alarm out, or R\+TC clock calibration out.
+\item W\+K\+UP pins if enabled. S\+T\+M32\+F0x8 devices, the Stop mode is available, but it is aningless to distinguish between voltage regulator in Low power mode and voltage regulator in Run mode because the regulator not used and the core is supplied directly from an external source. Consequently, the Standby mode is not available on those devices. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___p_w_r___exported___functions___group2_gacfca5f1062274423e08317c0a5a225fa}\label{group___p_w_r___exported___functions___group2_gacfca5f1062274423e08317c0a5a225fa}} 
+\index{Peripheral Control functions@{Peripheral Control functions}!HAL\_PWR\_EnterSTOPMode@{HAL\_PWR\_EnterSTOPMode}}
+\index{HAL\_PWR\_EnterSTOPMode@{HAL\_PWR\_EnterSTOPMode}!Peripheral Control functions@{Peripheral Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWR\_EnterSTOPMode()}{HAL\_PWR\_EnterSTOPMode()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+O\+P\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Regulator,  }\item[{uint8\+\_\+t}]{S\+T\+O\+P\+Entry }\end{DoxyParamCaption})}
+
+
+
+Enters S\+T\+OP mode. 
+
+\begin{DoxyNote}{Note}
+In Stop mode, all I/O pins keep the same state as in Run mode. 
+
+When exiting Stop mode by issuing an interrupt or a wakeup event, the H\+SI RC oscillator is selected as system clock. 
+
+When the voltage regulator operates in low power mode, an additional startup delay is incurred when waking up from Stop mode. By keeping the internal regulator ON during Stop mode, the consumption is higher although the startup time is reduced. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Regulator} & Specifies the regulator state in S\+T\+OP mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item P\+W\+R\+\_\+\+M\+A\+I\+N\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+ON\+: S\+T\+OP mode with regulator ON \item P\+W\+R\+\_\+\+L\+O\+W\+P\+O\+W\+E\+R\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+ON\+: S\+T\+OP mode with low power regulator ON \end{DoxyItemize}
+\\
+\hline
+{\em S\+T\+O\+P\+Entry} & specifies if S\+T\+OP mode in entered with W\+FI or W\+FE instruction. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item P\+W\+R\+\_\+\+S\+T\+O\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FI\+:Enter S\+T\+OP mode with W\+FI instruction \item P\+W\+R\+\_\+\+S\+T\+O\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FE\+: Enter S\+T\+OP mode with W\+FE instruction \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

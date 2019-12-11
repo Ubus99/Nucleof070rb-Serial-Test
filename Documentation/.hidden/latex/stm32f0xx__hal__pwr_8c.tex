@@ -1,0 +1,105 @@
+\hypertarget{stm32f0xx__hal__pwr_8c}{}\doxysection{C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Drivers/\+S\+T\+M32\+F0xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Src/stm32f0xx\+\_\+hal\+\_\+pwr.c File Reference}
+\label{stm32f0xx__hal__pwr_8c}\index{C:/Users/sxlga/git/SerialTestProject/Drivers/STM32F0xx\_HAL\_Driver/Src/stm32f0xx\_hal\_pwr.c@{C:/Users/sxlga/git/SerialTestProject/Drivers/STM32F0xx\_HAL\_Driver/Src/stm32f0xx\_hal\_pwr.c}}
+
+
+P\+WR H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Power Controller (P\+WR) peripheral\+:  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gaa76f42833a89110293f687b034164916}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\begin{DoxyCompactList}\small\item\em Enables the Wake\+Up P\+I\+Nx functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gab12ca816929e23e36f5ed8f4ccdb1472}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\begin{DoxyCompactList}\small\item\em Disables the Wake\+Up P\+I\+Nx functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga5c84f4e046525c22d233c8a3443fab5f}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+L\+E\+E\+P\+Mode}} (uint32\+\_\+t Regulator, uint8\+\_\+t S\+L\+E\+E\+P\+Entry)
+\begin{DoxyCompactList}\small\item\em Enters Sleep mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gacfca5f1062274423e08317c0a5a225fa}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+O\+P\+Mode}} (uint32\+\_\+t Regulator, uint8\+\_\+t S\+T\+O\+P\+Entry)
+\begin{DoxyCompactList}\small\item\em Enters S\+T\+OP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga40736f74c169077fcd08f34470559aa2}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+A\+N\+D\+B\+Y\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enters S\+T\+A\+N\+D\+BY mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga85d0154c96068b286072a64fca4c7e6a}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Indicates Sleep-\/\+On-\/\+Exit when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga1da299e8186a3e08a694865bd41c3bb0}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Disables Sleep-\/\+On-\/\+Exit feature when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga6f33b1c8c8cc85129c68ac302a281033}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+S\+E\+V\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Enables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga7811014def9b864dd490a63ada4bab68}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+S\+E\+V\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Disables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group1_ga7edb99b94a46448c34f0301b0a077ff5}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the P\+WR peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group1_ga3d07cef39bf294db4aed7e06e5dbf9af}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Bk\+Up\+Access}} (void)
+\begin{DoxyCompactList}\small\item\em Enables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group1_ga1513de5f2e4b72e094fb04bab786fec8}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Bk\+Up\+Access}} (void)
+\begin{DoxyCompactList}\small\item\em Disables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Detailed Description}
+P\+WR H\+AL module driver. This file provides firmware functions to manage the following functionalities of the Power Controller (P\+WR) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team
+\begin{DoxyItemize}
+\item Initialization/de-\/initialization function
+\item Peripheral Control function
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyVerb}  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
+  *
+  ******************************************************************************
+  */
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f0xx_hal.h"
+
+/** @addtogroup STM32F0xx_HAL_Driver
+  * @{
+  */
+
+/** @defgroup PWR PWR
+  * @brief PWR HAL module driver
+  * @{
+  */
+
+#ifdef HAL_PWR_MODULE_ENABLED
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+/** @defgroup PWR_Exported_Functions PWR Exported Functions
+  * @{
+  */
+
+/** @defgroup PWR_Exported_Functions_Group1 Initialization and de-initialization functions 
+  *  @brief    Initialization and de-initialization functions
+  *
+@verbatim
+ ===============================================================================
+              ##### Initialization and de-initialization functions #####
+ ===============================================================================
+    [..]
+      After reset, the backup domain (RTC registers, RTC backup data
+      registers) is protected against possible unwanted
+      write accesses.
+      To enable access to the RTC Domain and RTC registers, proceed as follows:
+        (+) Enable the Power Controller (PWR) APB1 interface clock using the
+            __HAL_RCC_PWR_CLK_ENABLE() macro.
+        (+) Enable access to RTC domain using the HAL_PWR_EnableBkUpAccess() function.\end{DoxyVerb}
+ 

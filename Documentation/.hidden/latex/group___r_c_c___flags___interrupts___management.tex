@@ -1,0 +1,151 @@
+\hypertarget{group___r_c_c___flags___interrupts___management}{}\doxysection{Flags Interrupts Management}
+\label{group___r_c_c___flags___interrupts___management}\index{Flags Interrupts Management@{Flags Interrupts Management}}
+
+
+macros to manage the specified R\+CC Flags and interrupts.  
+
+
+Collaboration diagram for Flags Interrupts Management\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_c_c___flags___interrupts___management}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga180fb20a37b31a6e4f7e59213a6c0405}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) \mbox{\hyperlink{group___r_c_c___private___constants_ga97f80d22ba3506a43accbeb9ceb31f51}{R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E1\+\_\+\+A\+D\+D\+R\+E\+SS}} $\vert$= (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable R\+CC interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_gafc4df8cd4df0a529d11f18bf1f7e9f50}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) \mbox{\hyperlink{group___r_c_c___private___constants_ga97f80d22ba3506a43accbeb9ceb31f51}{R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E1\+\_\+\+A\+D\+D\+R\+E\+SS}} \&= (uint8\+\_\+t)($\sim$(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Disable R\+CC interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga9d8ab157f58045b8daf8136bee54f139}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) \mbox{\hyperlink{group___r_c_c___private___constants_ga1387fb2dfadb830eb83ab2772c8d2294}{R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E2\+\_\+\+A\+D\+D\+R\+E\+SS}} = (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the R\+CC\textquotesingle{}s interrupt pending bits. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga134af980b892f362c05ae21922cd828d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+IT}}(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)~((\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+IR \& (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check the R\+CC\textquotesingle{}s interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_gaf28c11b36035ef1e27883ff7ee2c46b0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+R\+E\+S\+E\+T\+\_\+\+F\+L\+A\+GS}}()~(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+SR $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafc26c5996b14005a70afbeaa29aae716}{R\+C\+C\+\_\+\+C\+S\+R\+\_\+\+R\+M\+VF}})
+\begin{DoxyCompactList}\small\item\em Set R\+M\+VF bit to clear the reset flags. The reset flags are R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+I\+N\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+R\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+S\+F\+T\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+O\+B\+L\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+W\+D\+G\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+W\+W\+D\+G\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+L\+P\+W\+R\+R\+ST. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_gae2d7d461630562bf2a2ddb31b1f96449}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check R\+CC flag is set or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+macros to manage the specified R\+CC Flags and interrupts. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___flags___interrupts___management_ga9d8ab157f58045b8daf8136bee54f139}\label{group___r_c_c___flags___interrupts___management_ga9d8ab157f58045b8daf8136bee54f139}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_CLEAR\_IT@{\_\_HAL\_RCC\_CLEAR\_IT}}
+\index{\_\_HAL\_RCC\_CLEAR\_IT@{\_\_HAL\_RCC\_CLEAR\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CLEAR\_IT}{\_\_HAL\_RCC\_CLEAR\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) \mbox{\hyperlink{group___r_c_c___private___constants_ga1387fb2dfadb830eb83ab2772c8d2294}{R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E2\+\_\+\+A\+D\+D\+R\+E\+SS}} = (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))}
+
+
+
+Clear the R\+CC\textquotesingle{}s interrupt pending bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+I\+N\+T\+E\+R\+R\+U\+P\+T$<$/strong$>$} & specifies the interrupt pending bit to clear. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___interrupt_ga2b4ef277c1b71f96e0bef4b9a72fca94}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+I\+R\+DY}} L\+SI ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_gad6b6e78a426850f595ef180d292a673d}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+E\+R\+DY}} L\+SE ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_ga69637e51b71f73f519c8c0a0613d042f}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I\+R\+DY}} H\+SI ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_gad13eaede352bca59611e6cae68665866}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+E\+R\+DY}} H\+SE ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_ga68d48e7811fb58f2649dce6cf0d823d9}{R\+C\+C\+\_\+\+I\+T\+\_\+\+P\+L\+L\+R\+DY}} Main P\+LL ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_ga9bb34a4912d2084dc1c0834eb53aa7a3}{R\+C\+C\+\_\+\+I\+T\+\_\+\+C\+SS}} Clock Security System interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga3b85dd0ddf5c816fad2bb2c149129c01}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I14\+R\+DY}} H\+S\+I14 ready interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_c_c___flags___interrupts___management_gaf28c11b36035ef1e27883ff7ee2c46b0}\label{group___r_c_c___flags___interrupts___management_gaf28c11b36035ef1e27883ff7ee2c46b0}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS@{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}}
+\index{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS@{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+R\+E\+S\+E\+T\+\_\+\+F\+L\+A\+GS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+SR $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafc26c5996b14005a70afbeaa29aae716}{R\+C\+C\+\_\+\+C\+S\+R\+\_\+\+R\+M\+VF}})}
+
+
+
+Set R\+M\+VF bit to clear the reset flags. The reset flags are R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+I\+N\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+R\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+S\+F\+T\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+O\+B\+L\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+W\+D\+G\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+W\+W\+D\+G\+R\+ST, R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+L\+P\+W\+R\+R\+ST. 
+
+\mbox{\Hypertarget{group___r_c_c___flags___interrupts___management_gafc4df8cd4df0a529d11f18bf1f7e9f50}\label{group___r_c_c___flags___interrupts___management_gafc4df8cd4df0a529d11f18bf1f7e9f50}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_DISABLE\_IT@{\_\_HAL\_RCC\_DISABLE\_IT}}
+\index{\_\_HAL\_RCC\_DISABLE\_IT@{\_\_HAL\_RCC\_DISABLE\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_DISABLE\_IT}{\_\_HAL\_RCC\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) \mbox{\hyperlink{group___r_c_c___private___constants_ga97f80d22ba3506a43accbeb9ceb31f51}{R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E1\+\_\+\+A\+D\+D\+R\+E\+SS}} \&= (uint8\+\_\+t)($\sim$(\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)))}
+
+
+
+Disable R\+CC interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+I\+N\+T\+E\+R\+R\+U\+P\+T$<$/strong$>$} & specifies the R\+CC interrupt sources to be disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___interrupt_ga2b4ef277c1b71f96e0bef4b9a72fca94}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+I\+R\+DY}} L\+SI ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_gad6b6e78a426850f595ef180d292a673d}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+E\+R\+DY}} L\+SE ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga69637e51b71f73f519c8c0a0613d042f}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I\+R\+DY}} H\+SI ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_gad13eaede352bca59611e6cae68665866}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+E\+R\+DY}} H\+SE ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga68d48e7811fb58f2649dce6cf0d823d9}{R\+C\+C\+\_\+\+I\+T\+\_\+\+P\+L\+L\+R\+DY}} main P\+LL ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga3b85dd0ddf5c816fad2bb2c149129c01}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I14\+R\+DY}} H\+S\+I14 ready interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_c_c___flags___interrupts___management_ga180fb20a37b31a6e4f7e59213a6c0405}\label{group___r_c_c___flags___interrupts___management_ga180fb20a37b31a6e4f7e59213a6c0405}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_ENABLE\_IT@{\_\_HAL\_RCC\_ENABLE\_IT}}
+\index{\_\_HAL\_RCC\_ENABLE\_IT@{\_\_HAL\_RCC\_ENABLE\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_ENABLE\_IT}{\_\_HAL\_RCC\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint8\+\_\+t $\ast$) \mbox{\hyperlink{group___r_c_c___private___constants_ga97f80d22ba3506a43accbeb9ceb31f51}{R\+C\+C\+\_\+\+C\+I\+R\+\_\+\+B\+Y\+T\+E1\+\_\+\+A\+D\+D\+R\+E\+SS}} $\vert$= (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))}
+
+
+
+Enable R\+CC interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+I\+N\+T\+E\+R\+R\+U\+P\+T$<$/strong$>$} & specifies the R\+CC interrupt sources to be enabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___interrupt_ga2b4ef277c1b71f96e0bef4b9a72fca94}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+I\+R\+DY}} L\+SI ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_gad6b6e78a426850f595ef180d292a673d}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+E\+R\+DY}} L\+SE ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga69637e51b71f73f519c8c0a0613d042f}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I\+R\+DY}} H\+SI ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_gad13eaede352bca59611e6cae68665866}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+E\+R\+DY}} H\+SE ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga68d48e7811fb58f2649dce6cf0d823d9}{R\+C\+C\+\_\+\+I\+T\+\_\+\+P\+L\+L\+R\+DY}} main P\+LL ready interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga3b85dd0ddf5c816fad2bb2c149129c01}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I14\+R\+DY}} H\+S\+I14 ready interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_c_c___flags___interrupts___management_gae2d7d461630562bf2a2ddb31b1f96449}\label{group___r_c_c___flags___interrupts___management_gae2d7d461630562bf2a2ddb31b1f96449}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_GET\_FLAG@{\_\_HAL\_RCC\_GET\_FLAG}}
+\index{\_\_HAL\_RCC\_GET\_FLAG@{\_\_HAL\_RCC\_GET\_FLAG}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_FLAG}{\_\_HAL\_RCC\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((((\_\_FLAG\_\_) >> 5U) == \mbox{\hyperlink{group___r_c_c___private___constants_ga56feb1abcd35b22427fa55164c585afa}{CR\_REG\_INDEX}})? \mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>CR :      \(\backslash\)}
+\DoxyCodeLine{                                       (((\_\_FLAG\_\_) >> 5U) == \mbox{\hyperlink{group___r_c_c___private___constants_ga8046e472578601da13c39af3eb573693}{CR2\_REG\_INDEX}})? \mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>CR2 :    \(\backslash\)}
+\DoxyCodeLine{                                       (((\_\_FLAG\_\_) >> 5U) == \mbox{\hyperlink{group___r_c_c___private___constants_ga114b3e5b2a2cdb5d85f65511fe085a6d}{BDCR\_REG\_INDEX}}) ? \mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>BDCR : \(\backslash\)}
+\DoxyCodeLine{                                       \mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>CSR) \& (1U << ((\_\_FLAG\_\_) \& \mbox{\hyperlink{group___r_c_c___private___constants_ga80017c6bf8a5c6f53a1a21bb8db93a82}{RCC\_FLAG\_MASK}})))}
+
+\end{DoxyCode}
+
+
+Check R\+CC flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+F\+L\+A\+G$<$/strong$>$} & specifies the flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___flag_ga827d986723e7ce652fa733bb8184d216}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+H\+S\+I\+R\+DY}} H\+SI oscillator clock ready. \item \mbox{\hyperlink{group___r_c_c___flag_ga173edf47bec93cf269a0e8d0fec9997c}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+H\+S\+E\+R\+DY}} H\+SE oscillator clock ready. \item \mbox{\hyperlink{group___r_c_c___flag_gaf82d8afb18d9df75db1d6c08b9c50046}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+L\+L\+R\+DY}} Main P\+LL clock ready. \item \mbox{\hyperlink{group___r_c_c___flag_ga8757cbfae2c0b6871d9e3ddedff95420}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+H\+S\+I14\+R\+DY}} H\+S\+I14 oscillator clock ready \item \mbox{\hyperlink{group___r_c_c___flag_gac9fb963db446c16e46a18908f7fe1927}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+L\+S\+E\+R\+DY}} L\+SE oscillator clock ready. \item \mbox{\hyperlink{group___r_c_c___flag_ga8c5e4992314d347597621bfe7ab10d72}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+L\+S\+I\+R\+DY}} L\+SI oscillator clock ready. \item \mbox{\hyperlink{group___r_c_c___flag_ga9bacaedece5c7cb6d9e52c1412e1a8ae}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+O\+B\+L\+R\+ST}} Option Byte Load reset \item \mbox{\hyperlink{group___r_c_c___flag_gabfc3ab5d4a8a94ec1c9f38794ce37ad6}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+I\+N\+R\+ST}} Pin reset. \item \mbox{\hyperlink{group___r_c_c___flag_ga39ad309070f416720207eece5da7dc2c}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+R\+R\+ST}} P\+O\+R/\+P\+DR reset. \item \mbox{\hyperlink{group___r_c_c___flag_gaf7852615e9b19f0b2dbc8d08c7594b52}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+S\+F\+T\+R\+ST}} Software reset. \item \mbox{\hyperlink{group___r_c_c___flag_gaac46bac8a97cf16635ff7ffc1e6c657f}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+W\+D\+G\+R\+ST}} Independent Watchdog reset. \item \mbox{\hyperlink{group___r_c_c___flag_gaa80b60b2d497ccd7b7de1075009999a7}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+W\+W\+D\+G\+R\+ST}} Window Watchdog reset. \item \mbox{\hyperlink{group___r_c_c___flag_ga67049531354aed7546971163d02c9920}{R\+C\+C\+\_\+\+F\+L\+A\+G\+\_\+\+L\+P\+W\+R\+R\+ST}} Low Power reset. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{F\+L\+AG}} (T\+R\+UE or F\+A\+L\+SE). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___flags___interrupts___management_ga134af980b892f362c05ae21922cd828d}\label{group___r_c_c___flags___interrupts___management_ga134af980b892f362c05ae21922cd828d}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_GET\_IT@{\_\_HAL\_RCC\_GET\_IT}}
+\index{\_\_HAL\_RCC\_GET\_IT@{\_\_HAL\_RCC\_GET\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_IT}{\_\_HAL\_RCC\_GET\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+IR \& (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+\_\+))}
+
+
+
+Check the R\+CC\textquotesingle{}s interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+I\+N\+T\+E\+R\+R\+U\+P\+T$<$/strong$>$} & specifies the R\+CC interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___interrupt_ga2b4ef277c1b71f96e0bef4b9a72fca94}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+I\+R\+DY}} L\+SI ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_gad6b6e78a426850f595ef180d292a673d}{R\+C\+C\+\_\+\+I\+T\+\_\+\+L\+S\+E\+R\+DY}} L\+SE ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_ga69637e51b71f73f519c8c0a0613d042f}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I\+R\+DY}} H\+SI ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_gad13eaede352bca59611e6cae68665866}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+E\+R\+DY}} H\+SE ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_ga68d48e7811fb58f2649dce6cf0d823d9}{R\+C\+C\+\_\+\+I\+T\+\_\+\+P\+L\+L\+R\+DY}} Main P\+LL ready interrupt. \item \mbox{\hyperlink{group___r_c_c___interrupt_ga9bb34a4912d2084dc1c0834eb53aa7a3}{R\+C\+C\+\_\+\+I\+T\+\_\+\+C\+SS}} Clock Security System interrupt \item \mbox{\hyperlink{group___r_c_c___interrupt_ga3b85dd0ddf5c816fad2bb2c149129c01}{R\+C\+C\+\_\+\+I\+T\+\_\+\+H\+S\+I14\+R\+DY}} H\+S\+I14 ready interrupt enable \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{I\+N\+T\+E\+R\+R\+U\+PT}} (T\+R\+UE or F\+A\+L\+SE). \\
+\hline
+\end{DoxyRetVals}

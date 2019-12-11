@@ -1,0 +1,10 @@
+<map id="RCCEx Exported Macros" name="RCCEx Exported Macros">
+<area shape="rect" id="node1" href="$group___r_c_c_ex___peripheral___clock___enable___disable___status.html" title="Get the enable or disable status of peripheral clock." alt="" coords="339,5,501,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="119,173,287,198"/>
+<area shape="rect" id="node3" href="$group___r_c_c_ex___peripheral___clock___source___config.html" title=" " alt="" coords="338,69,502,109"/>
+<area shape="rect" id="node4" href="$group___r_c_c_ex___peripheral___clock___enable___disable.html" title="Enables or disables the AHB1 peripheral clock." alt="" coords="335,133,505,173"/>
+<area shape="rect" id="node6" href="$group___r_c_c_ex___force___release___peripheral___reset.html" title="Forces or releases peripheral reset." alt="" coords="343,197,497,237"/>
+<area shape="rect" id="node7" href="$group___r_c_c_ex___l_s_e___configuration.html" title=" " alt="" coords="341,262,499,287"/>
+<area shape="rect" id="node8" href="$group___r_c_c_ex___h_s_i48___enable___disable.html" title=" " alt="" coords="346,312,494,352"/>
+<area shape="rect" id="node5" href="$group___r_c_c_ex.html" title=" " alt="" coords="5,173,71,198"/>
+</map>

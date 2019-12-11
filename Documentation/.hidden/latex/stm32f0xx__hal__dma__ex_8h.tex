@@ -1,0 +1,53 @@
+\hypertarget{stm32f0xx__hal__dma__ex_8h}{}\doxysection{C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Drivers/\+S\+T\+M32\+F0xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+hal\+\_\+dma\+\_\+ex.h File Reference}
+\label{stm32f0xx__hal__dma__ex_8h}\index{C:/Users/sxlga/git/SerialTestProject/Drivers/STM32F0xx\_HAL\_Driver/Inc/stm32f0xx\_hal\_dma\_ex.h@{C:/Users/sxlga/git/SerialTestProject/Drivers/STM32F0xx\_HAL\_Driver/Inc/stm32f0xx\_hal\_dma\_ex.h}}
+
+
+Header file of D\+MA H\+AL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+Include dependency graph for stm32f0xx\+\_\+hal\+\_\+dma\+\_\+ex.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{stm32f0xx__hal__dma__ex_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f0xx__hal__dma__ex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___exported___macros_gae3feef5ea50ff13a6a5b98cb353c87b0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+G\+E\+T\+\_\+\+T\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+D\+EX}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current D\+MA Channel transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___exported___macros_ga0095f5f3166a82bedc67744ac94acfba}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+G\+E\+T\+\_\+\+H\+T\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+D\+EX}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current D\+MA Channel half transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___exported___macros_ga5e765bb3b1c5fc9f1b1abbbb764250bc}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+G\+E\+T\+\_\+\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+D\+EX}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current D\+MA Channel transfer error flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___exported___macros_ga718c628ea8c112c5b09bc61c52b86e75}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+G\+E\+T\+\_\+\+G\+I\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+D\+EX}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current D\+MA Channel Global interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___exported___macros_ga798d4b3b3fbd32b95540967bb35b35be}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~(\mbox{\hyperlink{group___peripheral__declaration_gacc16d2a5937f7585320a98f7f6b578f9}{D\+M\+A1}}-\/$>$I\+SR \& (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Get the D\+MA Channel pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___exported___macros_gabc041fb1c85ea7a3af94e42470ef7f2a}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~(\mbox{\hyperlink{group___peripheral__declaration_gacc16d2a5937f7585320a98f7f6b578f9}{D\+M\+A1}}-\/$>$I\+F\+CR = (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clears the D\+MA Channel pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of D\+MA H\+AL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

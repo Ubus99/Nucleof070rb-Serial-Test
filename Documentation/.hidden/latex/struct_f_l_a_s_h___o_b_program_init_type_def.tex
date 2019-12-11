@@ -1,0 +1,81 @@
+\hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def}{}\doxysection{F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def Struct Reference}
+\label{struct_f_l_a_s_h___o_b_program_init_type_def}\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+
+
+F\+L\+A\+SH Options bytes program structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f0xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a46bffc2a63ea02e15b9187856535d890}{Option\+Type}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a2607ba046f7a3af46e7209b8f1e9e20d}{W\+R\+P\+State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a5cf7b06b58d7ed6b94390732cfe2db8c}{W\+R\+P\+Page}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a165bbb65be0086a30b13895594d274b1}{R\+D\+P\+Level}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ae6c9b55d49bc9627a2319ba680a924de}{U\+S\+E\+R\+Config}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ae4c47bdfa9e7d8f9969c89df5d8fbd34}{D\+A\+T\+A\+Address}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ad161cc6d98053b7fc00661014140ca11}{D\+A\+T\+A\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+F\+L\+A\+SH Options bytes program structure definition. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_ae4c47bdfa9e7d8f9969c89df5d8fbd34}\label{struct_f_l_a_s_h___o_b_program_init_type_def_ae4c47bdfa9e7d8f9969c89df5d8fbd34}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!DATAAddress@{DATAAddress}}
+\index{DATAAddress@{DATAAddress}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{DATAAddress}{DATAAddress}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+D\+A\+T\+A\+Address}
+
+D\+A\+T\+A\+Address\+: Address of the option byte D\+A\+TA to be programmed This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___data___address}{Option Byte Data Address}} \mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_ad161cc6d98053b7fc00661014140ca11}\label{struct_f_l_a_s_h___o_b_program_init_type_def_ad161cc6d98053b7fc00661014140ca11}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!DATAData@{DATAData}}
+\index{DATAData@{DATAData}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{DATAData}{DATAData}}
+{\footnotesize\ttfamily uint8\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+D\+A\+T\+A\+Data}
+
+D\+A\+T\+A\+Data\+: Data to be stored in the option byte D\+A\+TA This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x\+FF \mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_a46bffc2a63ea02e15b9187856535d890}\label{struct_f_l_a_s_h___o_b_program_init_type_def_a46bffc2a63ea02e15b9187856535d890}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!OptionType@{OptionType}}
+\index{OptionType@{OptionType}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OptionType}{OptionType}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+Option\+Type}
+
+Option\+Type\+: Option byte to be configured. This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___type}{Option Bytes Type}} \mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_a165bbb65be0086a30b13895594d274b1}\label{struct_f_l_a_s_h___o_b_program_init_type_def_a165bbb65be0086a30b13895594d274b1}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!RDPLevel@{RDPLevel}}
+\index{RDPLevel@{RDPLevel}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{RDPLevel}{RDPLevel}}
+{\footnotesize\ttfamily uint8\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+R\+D\+P\+Level}
+
+R\+D\+P\+Level\+: Set the read protection level.. This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___read___protection}{Option Byte Read Protection}} \mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_ae6c9b55d49bc9627a2319ba680a924de}\label{struct_f_l_a_s_h___o_b_program_init_type_def_ae6c9b55d49bc9627a2319ba680a924de}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!USERConfig@{USERConfig}}
+\index{USERConfig@{USERConfig}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{USERConfig}{USERConfig}}
+{\footnotesize\ttfamily uint8\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+U\+S\+E\+R\+Config}
+
+U\+S\+E\+R\+Config\+: Program the F\+L\+A\+SH User Option Byte\+: I\+W\+DG / S\+T\+OP / S\+T\+D\+BY / B\+O\+O\+T1 / V\+D\+D\+A\+\_\+\+A\+N\+A\+L\+OG / S\+R\+A\+M\+\_\+\+P\+A\+R\+I\+TY This parameter can be a combination of \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___i_watchdog}{Option Byte I\+Watchdog}}, \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_o_p}{Option Byte n\+R\+ST S\+T\+OP}}, \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_d_b_y}{Option Byte n\+R\+ST S\+T\+D\+BY}}, \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___b_o_o_t1}{Option Byte B\+O\+O\+T1}}, \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___v_d_d_a___analog___monitoring}{Option Byte V\+D\+DA Analog Monitoring}} and \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___r_a_m___parity___check___enable}{Option Byte S\+R\+AM Parity Check Enable}} \mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_a5cf7b06b58d7ed6b94390732cfe2db8c}\label{struct_f_l_a_s_h___o_b_program_init_type_def_a5cf7b06b58d7ed6b94390732cfe2db8c}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!WRPPage@{WRPPage}}
+\index{WRPPage@{WRPPage}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{WRPPage}{WRPPage}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+W\+R\+P\+Page}
+
+W\+R\+P\+Page\+: specifies the page(s) to be write protected This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___write___protection}{F\+L\+A\+S\+H\+Ex OB Write Protection}} \mbox{\Hypertarget{struct_f_l_a_s_h___o_b_program_init_type_def_a2607ba046f7a3af46e7209b8f1e9e20d}\label{struct_f_l_a_s_h___o_b_program_init_type_def_a2607ba046f7a3af46e7209b8f1e9e20d}} 
+\index{FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}!WRPState@{WRPState}}
+\index{WRPState@{WRPState}!FLASH\_OBProgramInitTypeDef@{FLASH\_OBProgramInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{WRPState}{WRPState}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+L\+A\+S\+H\+\_\+\+O\+B\+Program\+Init\+Type\+Def\+::\+W\+R\+P\+State}
+
+W\+R\+P\+State\+: Write protection activation or deactivation. This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h_ex___o_b___w_r_p___state}{Option Byte W\+RP State}} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Drivers/\+S\+T\+M32\+F0xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32f0xx__hal__flash__ex_8h}{stm32f0xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h}}\end{DoxyCompactItemize}

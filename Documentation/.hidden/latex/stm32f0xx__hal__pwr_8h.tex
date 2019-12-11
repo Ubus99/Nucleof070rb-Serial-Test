@@ -1,0 +1,91 @@
+\hypertarget{stm32f0xx__hal__pwr_8h}{}\doxysection{C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Drivers/\+S\+T\+M32\+F0xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f0xx\+\_\+hal\+\_\+pwr.h File Reference}
+\label{stm32f0xx__hal__pwr_8h}\index{C:/Users/sxlga/git/SerialTestProject/Drivers/STM32F0xx\_HAL\_Driver/Inc/stm32f0xx\_hal\_pwr.h@{C:/Users/sxlga/git/SerialTestProject/Drivers/STM32F0xx\_HAL\_Driver/Inc/stm32f0xx\_hal\_pwr.h}}
+
+
+Header file of P\+WR H\+AL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f0xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h\char`\"{}}\newline
+Include dependency graph for stm32f0xx\+\_\+hal\+\_\+pwr.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{stm32f0xx__hal__pwr_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f0xx__hal__pwr_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___regulator__state__in___s_t_o_p__mode_ga1d5b4e1482184286e28c16162f530039}{P\+W\+R\+\_\+\+M\+A\+I\+N\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+ON}}~(0x00000000U)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___regulator__state__in___s_t_o_p__mode_gab9922a15f8414818d736d5e7fcace963}{P\+W\+R\+\_\+\+L\+O\+W\+P\+O\+W\+E\+R\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+ON}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3aeb8d6f2539b0a3a4b851aeba0eea66}{P\+W\+R\+\_\+\+C\+R\+\_\+\+L\+P\+DS}}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___regulator__state__in___s_t_o_p__mode_ga03c105070272141c0bab5f2b74469072}{I\+S\+\_\+\+P\+W\+R\+\_\+\+R\+E\+G\+U\+L\+A\+T\+OR}}(R\+E\+G\+U\+L\+A\+T\+OR)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___s_l_e_e_p__mode__entry_ga4f0f99a3526c57efb3501b016639fa45}{P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FI}}~((uint8\+\_\+t)0x01U)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___s_l_e_e_p__mode__entry_ga2ef4bd42ad37dcfcd0813676087d559e}{P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FE}}~((uint8\+\_\+t)0x02U)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___s_l_e_e_p__mode__entry_ga9b36a9c213a77d36340788b2e7e277ff}{I\+S\+\_\+\+P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+\_\+\+E\+N\+T\+RY}}(E\+N\+T\+RY)~(((E\+N\+T\+RY) == \mbox{\hyperlink{group___p_w_r___s_l_e_e_p__mode__entry_ga4f0f99a3526c57efb3501b016639fa45}{P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FI}}) $\vert$$\vert$ ((E\+N\+T\+RY) == \mbox{\hyperlink{group___p_w_r___s_l_e_e_p__mode__entry_ga2ef4bd42ad37dcfcd0813676087d559e}{P\+W\+R\+\_\+\+S\+L\+E\+E\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FE}}))
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___s_t_o_p__mode__entry_ga3bdb1a9c9b421b73ab148d45eb90fa9b}{P\+W\+R\+\_\+\+S\+T\+O\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FI}}~((uint8\+\_\+t)0x01U)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___s_t_o_p__mode__entry_ga2e1ee5c9577cc322474a826fa97de798}{P\+W\+R\+\_\+\+S\+T\+O\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FE}}~((uint8\+\_\+t)0x02U)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___s_t_o_p__mode__entry_ga4a94eb1f400dec6e486fbc229cbea8a0}{I\+S\+\_\+\+P\+W\+R\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+T\+RY}}(E\+N\+T\+RY)~(((E\+N\+T\+RY) == \mbox{\hyperlink{group___p_w_r___s_t_o_p__mode__entry_ga3bdb1a9c9b421b73ab148d45eb90fa9b}{P\+W\+R\+\_\+\+S\+T\+O\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FI}}) $\vert$$\vert$ ((E\+N\+T\+RY) == \mbox{\hyperlink{group___p_w_r___s_t_o_p__mode__entry_ga2e1ee5c9577cc322474a826fa97de798}{P\+W\+R\+\_\+\+S\+T\+O\+P\+E\+N\+T\+R\+Y\+\_\+\+W\+FE}}))
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___exported___macro_ga2977135bbea35b786805eea640d1c884}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~((\mbox{\hyperlink{group___peripheral__declaration_ga04651c526497822a859942b928e57f8e}{P\+WR}}-\/$>$C\+SR \& (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check P\+WR flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r___exported___macro_ga96f24bf4b16c9f944cd829100bf746e5}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~(\mbox{\hyperlink{group___peripheral__declaration_ga04651c526497822a859942b928e57f8e}{P\+WR}}-\/$>$CR $\vert$=  (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+) $<$$<$ 2U)
+\begin{DoxyCompactList}\small\item\em Clear the P\+WR\textquotesingle{}s pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group1_ga7edb99b94a46448c34f0301b0a077ff5}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the P\+WR peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga3d07cef39bf294db4aed7e06e5dbf9af}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Bk\+Up\+Access}} (void)
+\begin{DoxyCompactList}\small\item\em Enables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga1513de5f2e4b72e094fb04bab786fec8}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Bk\+Up\+Access}} (void)
+\begin{DoxyCompactList}\small\item\em Disables access to the backup domain (R\+TC registers, R\+TC backup data registers when present). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gaa76f42833a89110293f687b034164916}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\begin{DoxyCompactList}\small\item\em Enables the Wake\+Up P\+I\+Nx functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gab12ca816929e23e36f5ed8f4ccdb1472}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\begin{DoxyCompactList}\small\item\em Disables the Wake\+Up P\+I\+Nx functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_gacfca5f1062274423e08317c0a5a225fa}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+O\+P\+Mode}} (uint32\+\_\+t Regulator, uint8\+\_\+t S\+T\+O\+P\+Entry)
+\begin{DoxyCompactList}\small\item\em Enters S\+T\+OP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga5c84f4e046525c22d233c8a3443fab5f}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+L\+E\+E\+P\+Mode}} (uint32\+\_\+t Regulator, uint8\+\_\+t S\+L\+E\+E\+P\+Entry)
+\begin{DoxyCompactList}\small\item\em Enters Sleep mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga40736f74c169077fcd08f34470559aa2}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enter\+S\+T\+A\+N\+D\+B\+Y\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enters S\+T\+A\+N\+D\+BY mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga85d0154c96068b286072a64fca4c7e6a}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Indicates Sleep-\/\+On-\/\+Exit when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga1da299e8186a3e08a694865bd41c3bb0}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Disables Sleep-\/\+On-\/\+Exit feature when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga6f33b1c8c8cc85129c68ac302a281033}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+S\+E\+V\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Enables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___p_w_r___exported___functions___group2_ga7811014def9b864dd490a63ada4bab68}{H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Disable\+S\+E\+V\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Disables C\+O\+R\+T\+EX M4 S\+E\+V\+O\+N\+P\+E\+ND bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of P\+WR H\+AL module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

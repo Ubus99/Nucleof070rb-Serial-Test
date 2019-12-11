@@ -1,0 +1,58 @@
+\hypertarget{group___r_c_c_ex___l_s_e___configuration}{}\doxysection{L\+SE Drive Configuration}
+\label{group___r_c_c_ex___l_s_e___configuration}\index{LSE Drive Configuration@{LSE Drive Configuration}}
+
+
+~\newline
+  
+
+
+Collaboration diagram for L\+SE Drive Configuration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_c_c_ex___l_s_e___configuration}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___l_s_e___configuration_ga9e21c193560567cfc3f908d733d9b19b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to configure the External Low Speed oscillator (L\+SE) drive capability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+~\newline
+ 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c_ex___l_s_e___configuration_ga9e21c193560567cfc3f908d733d9b19b}\label{group___r_c_c_ex___l_s_e___configuration_ga9e21c193560567cfc3f908d733d9b19b}} 
+\index{LSE Drive Configuration@{LSE Drive Configuration}!\_\_HAL\_RCC\_LSEDRIVE\_CONFIG@{\_\_HAL\_RCC\_LSEDRIVE\_CONFIG}}
+\index{\_\_HAL\_RCC\_LSEDRIVE\_CONFIG@{\_\_HAL\_RCC\_LSEDRIVE\_CONFIG}!LSE Drive Configuration@{LSE Drive Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_LSEDRIVE\_CONFIG}{\_\_HAL\_RCC\_LSEDRIVE\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+C\+O\+N\+F\+IG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>BDCR,\(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa9e761cf5e09906a38e9c7e8e750514c}{RCC\_BDCR\_LSEDRV}}, (uint32\_t)(\_\_RCC\_LSEDRIVE\_\_) ))}
+
+\end{DoxyCode}
+
+
+Macro to configure the External Low Speed oscillator (L\+SE) drive capability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E$<$/strong$>$} & specifies the new state of the L\+SE drive capability. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c_ex___l_s_e_drive___configuration_gab5fa5b50304710db2d7f6d583a225da3}{R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+L\+OW}} L\+SE oscillator low drive capability. \item \mbox{\hyperlink{group___r_c_c_ex___l_s_e_drive___configuration_ga1151beb7f9869e91fe7617936ad0efff}{R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+M\+E\+D\+I\+U\+M\+L\+OW}} L\+SE oscillator medium low drive capability. \item \mbox{\hyperlink{group___r_c_c_ex___l_s_e_drive___configuration_ga295eed1e1368d526fa0f6356ceecbc48}{R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+M\+E\+D\+I\+U\+M\+H\+I\+GH}} L\+SE oscillator medium high drive capability. \item \mbox{\hyperlink{group___r_c_c_ex___l_s_e_drive___configuration_ga90b0854f3813d7ab2781519bfa58fd95}{R\+C\+C\+\_\+\+L\+S\+E\+D\+R\+I\+V\+E\+\_\+\+H\+I\+GH}} L\+SE oscillator high drive capability. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

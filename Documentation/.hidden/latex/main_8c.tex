@@ -1,0 +1,426 @@
+\hypertarget{main_8c}{}\doxysection{C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Core/\+Src/main.c File Reference}
+\label{main_8c}\index{C:/Users/sxlga/git/SerialTestProject/Core/Src/main.c@{C:/Users/sxlga/git/SerialTestProject/Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a4c8ee68db0a8c67a3ed1b52765abaf98}{Measuring\+Points}}~0x06
+\item 
+\#define \mbox{\hyperlink{main_8c_a93a871e957f4d6ad118879c62cd95224}{Measuring\+Points\+Prescaler}}~0x01
+\item 
+\#define \mbox{\hyperlink{main_8c_a366e6164347b8d9f65b22129ed69a296}{Relevant\+Measuring\+Points}}~(\mbox{\hyperlink{main_8c_a4c8ee68db0a8c67a3ed1b52765abaf98}{Measuring\+Points}} / \mbox{\hyperlink{main_8c_a93a871e957f4d6ad118879c62cd95224}{Measuring\+Points\+Prescaler}})
+\item 
+\#define \mbox{\hyperlink{main_8c_a86803dfb1a9b19810e5f1dfc520d1dda}{I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+P\+M\+\_\+\+V\+A\+L\+UE}}~\char`\"{}E\+R\+R\+O\+R\+:\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+P\+M\+\_\+\+V\+A\+L\+UE\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a831c5bcd3faf462bf740fea33e59ac89}{calculate\+R\+P\+M\+Value}} ()
+\begin{DoxyCompactList}\small\item\em This function calculates a R\+PM value for each wheel from the information in the W\+S\+S\+Sliding\+Buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_af909d9335a2dd5d96e1e910484fd8136}{send\+Serial\+Message}} (char $\ast$)
+\item 
+double \mbox{\hyperlink{main_8c_a96ae9abed439401fd6dd28a1e2c2f94e}{pow}} (double, double)
+\item 
+void \mbox{\hyperlink{main_8c_a5c508cfaccc49d0007cec3caba5bf0ec}{set\+W\+S\+S\+Sliding\+Buffer}} (uint8\+\_\+t, uint16\+\_\+t)
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_ae89fdd15729ad41a66911190fcbab23a}{M\+X\+\_\+\+G\+P\+I\+O\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a6db1014d713f6f5c0f52a13299ee0733}{M\+X\+\_\+\+U\+S\+A\+R\+T2\+\_\+\+U\+A\+R\+T\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+R\+T2 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_af5e0e0fbbf2e1ec351699c09950583fe}{M\+X\+\_\+\+T\+I\+M6\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M6 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a1f9e6286a5c651e752b639453b290d9d}{M\+X\+\_\+\+T\+I\+M7\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M7 Initialization Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_af3f64b74113a0bb84c15c838c4938f7a}{set\+W\+S\+S\+Sliding\+Buffer\+Val}} (uint8\+\_\+t wheel, uint16\+\_\+t New\+Val)
+\begin{DoxyCompactList}\small\item\em This function slides the W\+S\+S\+Sliding\+Buffer to the right and fills a new value into \mbox{[}0\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a44f17124a671f2701f79b24c36cc5a6b}{increment\+Timer\+Extension}} (uint8\+\_\+t wheel)
+\begin{DoxyCompactList}\small\item\em This function increments the Timer Extension for a give wheel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a1564492831a79fa18466467c3420c3c3}{htim6}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_abb71bf3ee68e2a051fbeec6c3ab3012d}{htim7}}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___exported___types_ga7adf4f3e4c3ecde572be5925c915a967}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\item 
+int \mbox{\hyperlink{main_8c_a93cff939b0b547e35deea19e9c55d628}{activity\+Indicator}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a347777da6d868b846cfe92f511948875}{Timer\+Extension}} \mbox{[}2\mbox{]}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a27a77d3192d4fa62c4fbce28b44bde8c}{Timer\+Size}} = (uint16\+\_\+t) \mbox{\hyperlink{main_8c_a96ae9abed439401fd6dd28a1e2c2f94e}{pow}}(2, 16)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_aa6408ef1c1a5177660c40ce3fd3a30f8}{W\+S\+S\+Sliding\+Buffer}} \mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a366e6164347b8d9f65b22129ed69a296}{Relevant\+Measuring\+Points}}\mbox{]}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a1793b1bde48dbe8492dd2bf8e14e4ed0}{R\+P\+M\+Out}} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2019 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8c_a86803dfb1a9b19810e5f1dfc520d1dda}\label{main_8c_a86803dfb1a9b19810e5f1dfc520d1dda}} 
+\index{main.c@{main.c}!ILLEGAL\_RPM\_VALUE@{ILLEGAL\_RPM\_VALUE}}
+\index{ILLEGAL\_RPM\_VALUE@{ILLEGAL\_RPM\_VALUE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ILLEGAL\_RPM\_VALUE}{ILLEGAL\_RPM\_VALUE}}
+{\footnotesize\ttfamily \#define I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+P\+M\+\_\+\+V\+A\+L\+UE~\char`\"{}E\+R\+R\+O\+R\+:\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+R\+P\+M\+\_\+\+V\+A\+L\+UE\char`\"{}}
+
+\mbox{\Hypertarget{main_8c_a4c8ee68db0a8c67a3ed1b52765abaf98}\label{main_8c_a4c8ee68db0a8c67a3ed1b52765abaf98}} 
+\index{main.c@{main.c}!MeasuringPoints@{MeasuringPoints}}
+\index{MeasuringPoints@{MeasuringPoints}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MeasuringPoints}{MeasuringPoints}}
+{\footnotesize\ttfamily \#define Measuring\+Points~0x06}
+
+\mbox{\Hypertarget{main_8c_a93a871e957f4d6ad118879c62cd95224}\label{main_8c_a93a871e957f4d6ad118879c62cd95224}} 
+\index{main.c@{main.c}!MeasuringPointsPrescaler@{MeasuringPointsPrescaler}}
+\index{MeasuringPointsPrescaler@{MeasuringPointsPrescaler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MeasuringPointsPrescaler}{MeasuringPointsPrescaler}}
+{\footnotesize\ttfamily \#define Measuring\+Points\+Prescaler~0x01}
+
+\mbox{\Hypertarget{main_8c_a366e6164347b8d9f65b22129ed69a296}\label{main_8c_a366e6164347b8d9f65b22129ed69a296}} 
+\index{main.c@{main.c}!RelevantMeasuringPoints@{RelevantMeasuringPoints}}
+\index{RelevantMeasuringPoints@{RelevantMeasuringPoints}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{RelevantMeasuringPoints}{RelevantMeasuringPoints}}
+{\footnotesize\ttfamily \#define Relevant\+Measuring\+Points~(\mbox{\hyperlink{main_8c_a4c8ee68db0a8c67a3ed1b52765abaf98}{Measuring\+Points}} / \mbox{\hyperlink{main_8c_a93a871e957f4d6ad118879c62cd95224}{Measuring\+Points\+Prescaler}})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a831c5bcd3faf462bf740fea33e59ac89}\label{main_8c_a831c5bcd3faf462bf740fea33e59ac89}} 
+\index{main.c@{main.c}!calculateRPMValue@{calculateRPMValue}}
+\index{calculateRPMValue@{calculateRPMValue}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calculateRPMValue()}{calculateRPMValue()}}
+{\footnotesize\ttfamily void calculate\+R\+P\+M\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calculates a R\+PM value for each wheel from the information in the W\+S\+S\+Sliding\+Buffer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Nones} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a44f17124a671f2701f79b24c36cc5a6b}\label{main_8c_a44f17124a671f2701f79b24c36cc5a6b}} 
+\index{main.c@{main.c}!incrementTimerExtension@{incrementTimerExtension}}
+\index{incrementTimerExtension@{incrementTimerExtension}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{incrementTimerExtension()}{incrementTimerExtension()}}
+{\footnotesize\ttfamily void increment\+Timer\+Extension (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{wheel }\end{DoxyParamCaption})}
+
+
+
+This function increments the Timer Extension for a give wheel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wheel} & 0=$>$left; 1=$>$ right \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_ae89fdd15729ad41a66911190fcbab23a}\label{main_8c_ae89fdd15729ad41a66911190fcbab23a}} 
+\index{main.c@{main.c}!MX\_GPIO\_Init@{MX\_GPIO\_Init}}
+\index{MX\_GPIO\_Init@{MX\_GPIO\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_GPIO\_Init()}{MX\_GPIO\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+G\+P\+I\+O\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+G\+P\+IO Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{main_8c_ae89fdd15729ad41a66911190fcbab23a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_af5e0e0fbbf2e1ec351699c09950583fe}\label{main_8c_af5e0e0fbbf2e1ec351699c09950583fe}} 
+\index{main.c@{main.c}!MX\_TIM6\_Init@{MX\_TIM6\_Init}}
+\index{MX\_TIM6\_Init@{MX\_TIM6\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM6\_Init()}{MX\_TIM6\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M6\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M6 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{main_8c_af5e0e0fbbf2e1ec351699c09950583fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a1f9e6286a5c651e752b639453b290d9d}\label{main_8c_a1f9e6286a5c651e752b639453b290d9d}} 
+\index{main.c@{main.c}!MX\_TIM7\_Init@{MX\_TIM7\_Init}}
+\index{MX\_TIM7\_Init@{MX\_TIM7\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM7\_Init()}{MX\_TIM7\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M7\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M7 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{main_8c_a1f9e6286a5c651e752b639453b290d9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a6db1014d713f6f5c0f52a13299ee0733}\label{main_8c_a6db1014d713f6f5c0f52a13299ee0733}} 
+\index{main.c@{main.c}!MX\_USART2\_UART\_Init@{MX\_USART2\_UART\_Init}}
+\index{MX\_USART2\_UART\_Init@{MX\_USART2\_UART\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_USART2\_UART\_Init()}{MX\_USART2\_UART\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+U\+S\+A\+R\+T2\+\_\+\+U\+A\+R\+T\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+U\+S\+A\+R\+T2 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{main_8c_a6db1014d713f6f5c0f52a13299ee0733_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a96ae9abed439401fd6dd28a1e2c2f94e}\label{main_8c_a96ae9abed439401fd6dd28a1e2c2f94e}} 
+\index{main.c@{main.c}!pow@{pow}}
+\index{pow@{pow}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pow()}{pow()}}
+{\footnotesize\ttfamily double pow (\begin{DoxyParamCaption}\item[{double}]{,  }\item[{double}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_af909d9335a2dd5d96e1e910484fd8136}\label{main_8c_af909d9335a2dd5d96e1e910484fd8136}} 
+\index{main.c@{main.c}!sendSerialMessage@{sendSerialMessage}}
+\index{sendSerialMessage@{sendSerialMessage}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sendSerialMessage()}{sendSerialMessage()}}
+{\footnotesize\ttfamily void send\+Serial\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{main_8c_af909d9335a2dd5d96e1e910484fd8136_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a5c508cfaccc49d0007cec3caba5bf0ec}\label{main_8c_a5c508cfaccc49d0007cec3caba5bf0ec}} 
+\index{main.c@{main.c}!setWSSSlidingBuffer@{setWSSSlidingBuffer}}
+\index{setWSSSlidingBuffer@{setWSSSlidingBuffer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{setWSSSlidingBuffer()}{setWSSSlidingBuffer()}}
+{\footnotesize\ttfamily void set\+W\+S\+S\+Sliding\+Buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{,  }\item[{uint16\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_af3f64b74113a0bb84c15c838c4938f7a}\label{main_8c_af3f64b74113a0bb84c15c838c4938f7a}} 
+\index{main.c@{main.c}!setWSSSlidingBufferVal@{setWSSSlidingBufferVal}}
+\index{setWSSSlidingBufferVal@{setWSSSlidingBufferVal}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{setWSSSlidingBufferVal()}{setWSSSlidingBufferVal()}}
+{\footnotesize\ttfamily void set\+W\+S\+S\+Sliding\+Buffer\+Val (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{wheel,  }\item[{uint16\+\_\+t}]{New\+Val }\end{DoxyParamCaption})}
+
+
+
+This function slides the W\+S\+S\+Sliding\+Buffer to the right and fills a new value into \mbox{[}0\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wheel} & 0=$>$left; 1=$>$ right \\
+\hline
+{\em New\+Val} & the new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocksHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{main_8c_a70af21c671abfcc773614a9a4f63d920_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a93cff939b0b547e35deea19e9c55d628}\label{main_8c_a93cff939b0b547e35deea19e9c55d628}} 
+\index{main.c@{main.c}!activityIndicator@{activityIndicator}}
+\index{activityIndicator@{activityIndicator}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{activityIndicator}{activityIndicator}}
+{\footnotesize\ttfamily int activity\+Indicator = 0}
+
+\mbox{\Hypertarget{main_8c_a1564492831a79fa18466467c3420c3c3}\label{main_8c_a1564492831a79fa18466467c3420c3c3}} 
+\index{main.c@{main.c}!htim6@{htim6}}
+\index{htim6@{htim6}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim6}{htim6}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim6}
+
+\mbox{\Hypertarget{main_8c_abb71bf3ee68e2a051fbeec6c3ab3012d}\label{main_8c_abb71bf3ee68e2a051fbeec6c3ab3012d}} 
+\index{main.c@{main.c}!htim7@{htim7}}
+\index{htim7@{htim7}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim7}{htim7}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim7}
+
+\mbox{\Hypertarget{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\index{main.c@{main.c}!huart2@{huart2}}
+\index{huart2@{huart2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___exported___types_ga7adf4f3e4c3ecde572be5925c915a967}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def}} huart2}
+
+\mbox{\Hypertarget{main_8c_a1793b1bde48dbe8492dd2bf8e14e4ed0}\label{main_8c_a1793b1bde48dbe8492dd2bf8e14e4ed0}} 
+\index{main.c@{main.c}!RPMOut@{RPMOut}}
+\index{RPMOut@{RPMOut}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{RPMOut}{RPMOut}}
+{\footnotesize\ttfamily uint16\+\_\+t R\+P\+M\+Out\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_a347777da6d868b846cfe92f511948875}\label{main_8c_a347777da6d868b846cfe92f511948875}} 
+\index{main.c@{main.c}!TimerExtension@{TimerExtension}}
+\index{TimerExtension@{TimerExtension}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TimerExtension}{TimerExtension}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer\+Extension\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_a27a77d3192d4fa62c4fbce28b44bde8c}\label{main_8c_a27a77d3192d4fa62c4fbce28b44bde8c}} 
+\index{main.c@{main.c}!TimerSize@{TimerSize}}
+\index{TimerSize@{TimerSize}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TimerSize}{TimerSize}}
+{\footnotesize\ttfamily uint16\+\_\+t Timer\+Size = (uint16\+\_\+t) \mbox{\hyperlink{main_8c_a96ae9abed439401fd6dd28a1e2c2f94e}{pow}}(2, 16)}
+
+\mbox{\Hypertarget{main_8c_aa6408ef1c1a5177660c40ce3fd3a30f8}\label{main_8c_aa6408ef1c1a5177660c40ce3fd3a30f8}} 
+\index{main.c@{main.c}!WSSSlidingBuffer@{WSSSlidingBuffer}}
+\index{WSSSlidingBuffer@{WSSSlidingBuffer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{WSSSlidingBuffer}{WSSSlidingBuffer}}
+{\footnotesize\ttfamily uint16\+\_\+t W\+S\+S\+Sliding\+Buffer\mbox{[}2\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a366e6164347b8d9f65b22129ed69a296}{Relevant\+Measuring\+Points}}\mbox{]}}
+

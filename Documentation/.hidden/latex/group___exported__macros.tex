@@ -1,0 +1,75 @@
+\hypertarget{group___exported__macros}{}\doxysection{Exported\+\_\+macros}
+\label{group___exported__macros}\index{Exported\_macros@{Exported\_macros}}
+Collaboration diagram for Exported\+\_\+macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{group___exported__macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(R\+EG,  B\+IT)~((R\+EG) $\vert$= (B\+IT))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(R\+EG,  B\+IT)~((R\+EG) \&= $\sim$(B\+IT))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{R\+E\+A\+D\+\_\+\+B\+IT}}(R\+EG,  B\+IT)~((R\+EG) \& (B\+IT))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga1378fbdda39f40b85420df55f41460ef}{C\+L\+E\+A\+R\+\_\+\+R\+EG}}(R\+EG)~((R\+EG) = (0x0))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}(R\+EG,  V\+AL)~((R\+EG) = (V\+AL))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_gae7f188a4d26c9e713a48414783421071}{R\+E\+A\+D\+\_\+\+R\+EG}}(R\+EG)~((R\+EG))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG}}(R\+EG,  C\+L\+E\+A\+R\+M\+A\+SK,  S\+E\+T\+M\+A\+SK)~\mbox{\hyperlink{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}((R\+EG), (((\mbox{\hyperlink{group___exported__macros_gae7f188a4d26c9e713a48414783421071}{R\+E\+A\+D\+\_\+\+R\+EG}}(R\+EG)) \& ($\sim$(C\+L\+E\+A\+R\+M\+A\+SK))) $\vert$ (S\+E\+T\+M\+A\+SK)))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}\label{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}} 
+\index{Exported\_macros@{Exported\_macros}!CLEAR\_BIT@{CLEAR\_BIT}}
+\index{CLEAR\_BIT@{CLEAR\_BIT}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{CLEAR\_BIT}{CLEAR\_BIT}}
+{\footnotesize\ttfamily \#define C\+L\+E\+A\+R\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{B\+IT }\end{DoxyParamCaption})~((R\+EG) \&= $\sim$(B\+IT))}
+
+\mbox{\Hypertarget{group___exported__macros_ga1378fbdda39f40b85420df55f41460ef}\label{group___exported__macros_ga1378fbdda39f40b85420df55f41460ef}} 
+\index{Exported\_macros@{Exported\_macros}!CLEAR\_REG@{CLEAR\_REG}}
+\index{CLEAR\_REG@{CLEAR\_REG}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{CLEAR\_REG}{CLEAR\_REG}}
+{\footnotesize\ttfamily \#define C\+L\+E\+A\+R\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{R\+EG }\end{DoxyParamCaption})~((R\+EG) = (0x0))}
+
+\mbox{\Hypertarget{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}\label{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}} 
+\index{Exported\_macros@{Exported\_macros}!MODIFY\_REG@{MODIFY\_REG}}
+\index{MODIFY\_REG@{MODIFY\_REG}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{MODIFY\_REG}{MODIFY\_REG}}
+{\footnotesize\ttfamily \#define M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{C\+L\+E\+A\+R\+M\+A\+SK,  }\item[{}]{S\+E\+T\+M\+A\+SK }\end{DoxyParamCaption})~\mbox{\hyperlink{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}((R\+EG), (((\mbox{\hyperlink{group___exported__macros_gae7f188a4d26c9e713a48414783421071}{R\+E\+A\+D\+\_\+\+R\+EG}}(R\+EG)) \& ($\sim$(C\+L\+E\+A\+R\+M\+A\+SK))) $\vert$ (S\+E\+T\+M\+A\+SK)))}
+
+\mbox{\Hypertarget{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}\label{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}} 
+\index{Exported\_macros@{Exported\_macros}!READ\_BIT@{READ\_BIT}}
+\index{READ\_BIT@{READ\_BIT}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{READ\_BIT}{READ\_BIT}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{B\+IT }\end{DoxyParamCaption})~((R\+EG) \& (B\+IT))}
+
+\mbox{\Hypertarget{group___exported__macros_gae7f188a4d26c9e713a48414783421071}\label{group___exported__macros_gae7f188a4d26c9e713a48414783421071}} 
+\index{Exported\_macros@{Exported\_macros}!READ\_REG@{READ\_REG}}
+\index{READ\_REG@{READ\_REG}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{READ\_REG}{READ\_REG}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{R\+EG }\end{DoxyParamCaption})~((R\+EG))}
+
+\mbox{\Hypertarget{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}\label{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}} 
+\index{Exported\_macros@{Exported\_macros}!SET\_BIT@{SET\_BIT}}
+\index{SET\_BIT@{SET\_BIT}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{SET\_BIT}{SET\_BIT}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{B\+IT }\end{DoxyParamCaption})~((R\+EG) $\vert$= (B\+IT))}
+
+\mbox{\Hypertarget{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}\label{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}} 
+\index{Exported\_macros@{Exported\_macros}!WRITE\_REG@{WRITE\_REG}}
+\index{WRITE\_REG@{WRITE\_REG}!Exported\_macros@{Exported\_macros}}
+\doxysubsubsection{\texorpdfstring{WRITE\_REG}{WRITE\_REG}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{V\+AL }\end{DoxyParamCaption})~((R\+EG) = (V\+AL))}
+

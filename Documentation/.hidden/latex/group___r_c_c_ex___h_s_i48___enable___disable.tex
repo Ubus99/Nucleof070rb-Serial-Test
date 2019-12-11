@@ -1,0 +1,28 @@
+\hypertarget{group___r_c_c_ex___h_s_i48___enable___disable}{}\doxysection{R\+C\+C\+Ex H\+S\+I48 Enable Disable}
+\label{group___r_c_c_ex___h_s_i48___enable___disable}\index{RCCEx HSI48 Enable Disable@{RCCEx HSI48 Enable Disable}}
+
+
+~\newline
+  
+
+
+Collaboration diagram for R\+C\+C\+Ex H\+S\+I48 Enable Disable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_c_c_ex___h_s_i48___enable___disable}
+\end{center}
+\end{figure}
+~\newline
+ 
+
+Macros to enable or disable the Internal 48Mhz High Speed oscillator (H\+S\+I48). \begin{DoxyNote}{Note}
+The H\+S\+I48 is stopped by hardware when entering S\+T\+OP and S\+T\+A\+N\+D\+BY modes. 
+
+H\+S\+I48 can not be stopped if it is used as system clock source. In this case, you have to select another source of the system clock then stop the H\+S\+I14. 
+
+After enabling the H\+S\+I48 with \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+H\+S\+I48\+\_\+\+E\+N\+A\+B\+L\+E(), the application software should wait on H\+S\+I48\+R\+DY flag to be set indicating that H\+S\+I48 clock is stable and can be used as system clock source. This is not necessary if \mbox{\hyperlink{group___r_c_c___exported___functions___group1_ga9c504088722e03830df6caad932ad06b}{H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Osc\+Config()}} is used. 
+
+When the H\+S\+I48 is stopped, H\+S\+I48\+R\+DY flag goes low after 6 H\+S\+I48 oscillator clock cycles. 
+\end{DoxyNote}

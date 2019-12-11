@@ -1,0 +1,91 @@
+\hypertarget{stm32f0xx_8h}{}\doxysection{C\+:/\+Users/sxlga/git/\+Serial\+Test\+Project/\+Drivers/\+C\+M\+S\+I\+S/\+Device/\+S\+T/\+S\+T\+M32\+F0xx/\+Include/stm32f0xx.h File Reference}
+\label{stm32f0xx_8h}\index{C:/Users/sxlga/git/SerialTestProject/Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h@{C:/Users/sxlga/git/SerialTestProject/Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h}}
+
+
+C\+M\+S\+IS S\+T\+M32\+F0xx Device Peripheral Access Layer Header File. ~\newline
+  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f0xx_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___library__configuration__section_ga5ff454728a9a164b5469717c044546f4}{S\+T\+M32\+F0}}
+\begin{DoxyCompactList}\small\item\em S\+T\+M32 Family. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___library__configuration__section_ga66dd4a5456033130cc762ae237487dbb}{\+\_\+\+\_\+\+S\+T\+M32\+F0\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+IN}}~(0x02)
+\begin{DoxyCompactList}\small\item\em Comment the line below if you will not use the peripherals drivers. In this case, these drivers will not be included and the application code will be based on direct access to peripherals registers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___library__configuration__section_ga27cda80c27dab2457fbd235e998db878}{\+\_\+\+\_\+\+S\+T\+M32\+F0\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+U\+B1}}~(0x03)
+\item 
+\#define \mbox{\hyperlink{group___library__configuration__section_gae421b39741c9fd5aa0f7d4ccf6b6b253}{\+\_\+\+\_\+\+S\+T\+M32\+F0\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+U\+B2}}~(0x04)
+\item 
+\#define \mbox{\hyperlink{group___library__configuration__section_ga745d01d9751b23c2157e1a6710d75235}{\+\_\+\+\_\+\+S\+T\+M32\+F0\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+RC}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{group___library__configuration__section_gabdc7a0a890fd222cbd0c09e25a1cf438}{\+\_\+\+\_\+\+S\+T\+M32\+F0\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\item 
+\#define \mbox{\hyperlink{group___exported__types_gaffaf7c3f537d7a3370b1bbdda67a2bf6}{I\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+\_\+\+S\+T\+A\+TE}}(S\+T\+A\+TE)~(((S\+T\+A\+TE) == \mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d}{D\+I\+S\+A\+B\+LE}}) $\vert$$\vert$ ((S\+T\+A\+TE) == \mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf}{E\+N\+A\+B\+LE}}))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(R\+EG,  B\+IT)~((R\+EG) $\vert$= (B\+IT))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(R\+EG,  B\+IT)~((R\+EG) \&= $\sim$(B\+IT))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{R\+E\+A\+D\+\_\+\+B\+IT}}(R\+EG,  B\+IT)~((R\+EG) \& (B\+IT))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga1378fbdda39f40b85420df55f41460ef}{C\+L\+E\+A\+R\+\_\+\+R\+EG}}(R\+EG)~((R\+EG) = (0x0))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}(R\+EG,  V\+AL)~((R\+EG) = (V\+AL))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_gae7f188a4d26c9e713a48414783421071}{R\+E\+A\+D\+\_\+\+R\+EG}}(R\+EG)~((R\+EG))
+\item 
+\#define \mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG}}(R\+EG,  C\+L\+E\+A\+R\+M\+A\+SK,  S\+E\+T\+M\+A\+SK)~\mbox{\hyperlink{group___exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{W\+R\+I\+T\+E\+\_\+\+R\+EG}}((R\+EG), (((\mbox{\hyperlink{group___exported__macros_gae7f188a4d26c9e713a48414783421071}{R\+E\+A\+D\+\_\+\+R\+EG}}(R\+EG)) \& ($\sim$(C\+L\+E\+A\+R\+M\+A\+SK))) $\vert$ (S\+E\+T\+M\+A\+SK)))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{group___exported__types_ga89136caac2e14c55151f527ac02daaff}{Flag\+Status}} \mbox{\hyperlink{group___exported__types_gaacbd7ed539db0aacd973a0f6eca34074}{I\+T\+Status}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___exported__types_ga89136caac2e14c55151f527ac02daaff}{Flag\+Status}} \{ \mbox{\hyperlink{group___exported__types_gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05}{R\+E\+S\+ET}} = 0U, 
+\mbox{\hyperlink{group___exported__types_gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792}{S\+ET}} = !\+R\+E\+S\+ET
+ \}
+\item 
+enum \mbox{\hyperlink{group___exported__types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State}} \{ \mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d}{D\+I\+S\+A\+B\+LE}} = 0U, 
+\mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf}{E\+N\+A\+B\+LE}} = !\+D\+I\+S\+A\+B\+LE
+ \}
+\item 
+enum \mbox{\hyperlink{group___exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{Error\+Status}} \{ \mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8ac7f69f7c9e5aea9b8f54cf02870e2bf8}{S\+U\+C\+C\+E\+SS}} = 0U, 
+\mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90}{E\+R\+R\+OR}} = !\+S\+U\+C\+C\+E\+SS
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C\+M\+S\+IS S\+T\+M32\+F0xx Device Peripheral Access Layer Header File. ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team \begin{DoxyVerb}     The file is the unique include file that the application programmer
+     is using in the C source code, usually in main.c. This file contains:
+      - Configuration section that allows to select:
+         - The STM32F0xx device used in the target application
+         - To use or not the peripheral’s drivers in application code(i.e. 
+           code will be based on direct access to peripheral’s registers 
+           rather than drivers API), this option is controlled by 
+           "#define USE_HAL_DRIVER"
+\end{DoxyVerb}
+
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

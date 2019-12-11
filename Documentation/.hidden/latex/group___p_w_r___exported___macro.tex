@@ -1,0 +1,62 @@
+\hypertarget{group___p_w_r___exported___macro}{}\doxysection{P\+WR Exported Macro}
+\label{group___p_w_r___exported___macro}\index{PWR Exported Macro@{PWR Exported Macro}}
+Collaboration diagram for P\+WR Exported Macro\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{group___p_w_r___exported___macro}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r___exported___macro_ga2977135bbea35b786805eea640d1c884}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~((\mbox{\hyperlink{group___peripheral__declaration_ga04651c526497822a859942b928e57f8e}{P\+WR}}-\/$>$C\+SR \& (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check P\+WR flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___p_w_r___exported___macro_ga96f24bf4b16c9f944cd829100bf746e5}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+L\+AG}}(\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)~(\mbox{\hyperlink{group___peripheral__declaration_ga04651c526497822a859942b928e57f8e}{P\+WR}}-\/$>$CR $\vert$=  (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+) $<$$<$ 2U)
+\begin{DoxyCompactList}\small\item\em Clear the P\+WR\textquotesingle{}s pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___p_w_r___exported___macro_ga96f24bf4b16c9f944cd829100bf746e5}\label{group___p_w_r___exported___macro_ga96f24bf4b16c9f944cd829100bf746e5}} 
+\index{PWR Exported Macro@{PWR Exported Macro}!\_\_HAL\_PWR\_CLEAR\_FLAG@{\_\_HAL\_PWR\_CLEAR\_FLAG}}
+\index{\_\_HAL\_PWR\_CLEAR\_FLAG@{\_\_HAL\_PWR\_CLEAR\_FLAG}!PWR Exported Macro@{PWR Exported Macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_PWR\_CLEAR\_FLAG}{\_\_HAL\_PWR\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+L\+AG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group___peripheral__declaration_ga04651c526497822a859942b928e57f8e}{P\+WR}}-\/$>$CR $\vert$=  (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+) $<$$<$ 2U)}
+
+
+
+Clear the P\+WR\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+F\+L\+A\+G$<$/strong$>$} & specifies the flag to clear. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+WU\+: Wake Up flag \item P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+SB\+: Stand\+By flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___p_w_r___exported___macro_ga2977135bbea35b786805eea640d1c884}\label{group___p_w_r___exported___macro_ga2977135bbea35b786805eea640d1c884}} 
+\index{PWR Exported Macro@{PWR Exported Macro}!\_\_HAL\_PWR\_GET\_FLAG@{\_\_HAL\_PWR\_GET\_FLAG}}
+\index{\_\_HAL\_PWR\_GET\_FLAG@{\_\_HAL\_PWR\_GET\_FLAG}!PWR Exported Macro@{PWR Exported Macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_PWR\_GET\_FLAG}{\_\_HAL\_PWR\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+G\+E\+T\+\_\+\+F\+L\+AG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\mbox{\hyperlink{group___peripheral__declaration_ga04651c526497822a859942b928e57f8e}{P\+WR}}-\/$>$C\+SR \& (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+F\+L\+A\+G\+\_\+\+\_\+))}
+
+
+
+Check P\+WR flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+F\+L\+A\+G$<$/strong$>$} & specifies the flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+WU\+: Wake Up flag. This flag indicates that a wakeup event was received from the W\+K\+UP pin or from the R\+TC alarm (Alarm A), R\+TC Tamper event, R\+TC Time\+Stamp event or R\+TC Wakeup. An additional wakeup event is detected if the W\+K\+UP pin is enabled (by setting the E\+W\+UP bit) when the W\+K\+UP pin level is already high. \item P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+SB\+: Stand\+By flag. This flag indicates that the system was resumed from Stand\+By mode. \item P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+P\+V\+DO\+: P\+VD Output. This flag is valid only if P\+VD is enabled by the H\+A\+L\+\_\+\+P\+W\+R\+\_\+\+Enable\+P\+V\+D() function. The P\+VD is stopped by Standby mode For this reason, this bit is equal to 0 after Standby or reset until the P\+V\+DE bit is set. Warning\+: this Flag is not available on S\+T\+M32\+F030x8 products \item P\+W\+R\+\_\+\+F\+L\+A\+G\+\_\+\+V\+R\+E\+F\+I\+N\+T\+R\+DY\+: This flag indicates that the internal reference voltage V\+R\+E\+F\+I\+NT is ready. Warning\+: this Flag is not available on S\+T\+M32\+F030x8 products \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{F\+L\+AG}} (T\+R\+UE or F\+A\+L\+SE). \\
+\hline
+\end{DoxyRetVals}

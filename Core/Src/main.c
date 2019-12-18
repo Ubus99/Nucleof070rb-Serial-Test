@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include <math.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -38,12 +39,14 @@
 #define MeasuringPointsPrescaler	0x01
 #define RelevantMeasuringPoints		(MeasuringPoints / MeasuringPointsPrescaler) //with how many points should the RPM be calculated
 #define ILLEGAL_RPM_VALUE			"ERROR:_ILLEGAL_RPM_VALUE" //todo
+//telemetry
+#define bufferLength				24
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 void calculateRPMValue();
-void sendSerialMessage(char);
+void sendSerialMessage(char*);
 double pow(double, double);
 void setWSSSlidingBuffer(uint8_t, uint16_t);
 /* USER CODE END PM */
@@ -60,6 +63,7 @@ uint8_t TimerExtension[2]; //counts Timer Overflows
 uint16_t TimerSize = (uint16_t) pow(2, 16); //set to timer size
 uint16_t WSSSlidingBuffer[2][RelevantMeasuringPoints]; //[Wheel][time between points]
 uint16_t RPMOut[2]; //[Wheel]
+char buffer[bufferLength]; //buffer for concatenation of chars
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,6 +96,7 @@ int main(void) {
 	HAL_Init();
 
 	/* USER CODE BEGIN Init */
+	int cycles = 0;
 	for (int i = 0; i < RelevantMeasuringPoints; i++) {
 		WSSSlidingBuffer[0][i] = 0;
 		WSSSlidingBuffer[1][i] = 0;
@@ -116,14 +121,19 @@ int main(void) {
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
+	sendSerialMessage("<-----Startup----->\n\r");
 	while (1) {
 		calculateRPMValue();
-		sendSerialMessage(RPMOut[0]);
-		sendSerialMessage(": Left\n\r");
-		sendSerialMessage(RPMOut[1] + ": Right\n\r");
-		for (int i = 0; i < 10000000; ++i) {
 
-		}
+		snprintf(buffer, bufferLength, "<-----%i----->\n\r", cycles);
+		sendSerialMessage(&buffer);
+		snprintf(buffer, bufferLength, "%i : Left\n\r", RPMOut[0]);
+		sendSerialMessage(&buffer);
+		snprintf(buffer, bufferLength, "%i : Right\n\r", RPMOut[1]);
+		sendSerialMessage(&buffer);
+		cycles == 100 ? cycles = 0 : cycles++;
+		HAL_Delay(1000);
+
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
@@ -272,11 +282,11 @@ static void MX_GPIO_Init(void) {
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
 
-	/*Configure GPIO pin : PC13 */
-	GPIO_InitStruct.Pin = GPIO_PIN_13;
+	/*Configure GPIO pin : User_Button_Pin */
+	GPIO_InitStruct.Pin = User_Button_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+	HAL_GPIO_Init(User_Button_GPIO_Port, &GPIO_InitStruct);
 
 	/*Configure GPIO pin : LD2_Pin */
 	GPIO_InitStruct.Pin = LD2_Pin;
@@ -292,9 +302,8 @@ static void MX_GPIO_Init(void) {
 }
 
 /* USER CODE BEGIN 4 */
-void sendSerialMessage(char message) {
-	//HAL_UART_Transmit(&huart2, (uint8_t*) message, strlen(message), 0xFFFF);
-	HAL_UART_Transmit_IT(&huart2, (uint8_t) message, strlen(message));
+void sendSerialMessage(char *message) {
+	HAL_UART_Transmit(&huart2, message, bufferLength, 0xFFFF);
 }
 /**
  * @brief This function slides the WSSSlidingBuffer to the right and fills a new value into [0]

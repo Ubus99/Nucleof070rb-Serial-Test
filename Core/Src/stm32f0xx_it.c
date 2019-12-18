@@ -84,7 +84,7 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-	sendSerialMessage("Hard Error!");
+	sendSerialMessage("Hard_Error\n\r");
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {
@@ -147,7 +147,7 @@ void EXTI4_15_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
 	HAL_TIM_Base_Stop(&htim6);
-	setWSSSlidingBufferVal(0, __HAL_TIM_GET_COUNTER(&htim6)); //todo
+	setWSSSlidingBufferVal(0, __HAL_TIM_GET_COUNTER(&htim6));
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */

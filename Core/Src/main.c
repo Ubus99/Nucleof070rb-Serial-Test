@@ -38,20 +38,21 @@
 #define MeasuringPoints				0x06 //per wheel
 #define MeasuringPointsPrescaler	0x01
 #define RelevantMeasuringPoints		(MeasuringPoints / MeasuringPointsPrescaler) //with how many points should the RPM be calculated
-#define ILLEGAL_RPM_VALUE			"ERROR:_ILLEGAL_RPM_VALUE" //todo
 //telemetry
-#define bufferLength				24
+#define messageLength				30
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-void calculateRPMValue();
-void sendSerialMessage(char*);
 double pow(double, double);
+void sendSerialMessage(char*);
 void setWSSSlidingBuffer(uint8_t, uint16_t);
+void incrementTimerExtension(uint8_t);
+void calculateRPMValue();
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim7;
 
@@ -62,8 +63,8 @@ int activityIndicator = 0;
 uint8_t TimerExtension[2]; //counts Timer Overflows
 uint16_t TimerSize = (uint16_t) pow(2, 16); //set to timer size
 uint16_t WSSSlidingBuffer[2][RelevantMeasuringPoints]; //[Wheel][time between points]
-uint16_t RPMOut[2]; //[Wheel]
-char buffer[bufferLength]; //buffer for concatenation of chars
+uint16_t RPMOut[2] = { 0, 0 }; //[Wheel]
+char buffer[messageLength]; //buffer for concatenation of chars
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,6 +73,7 @@ static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_TIM6_Init(void);
 static void MX_TIM7_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -115,6 +117,7 @@ int main(void) {
 	MX_USART2_UART_Init();
 	MX_TIM6_Init();
 	MX_TIM7_Init();
+	MX_TIM3_Init();
 	/* USER CODE BEGIN 2 */
 
 	/* USER CODE END 2 */
@@ -125,14 +128,14 @@ int main(void) {
 	while (1) {
 		calculateRPMValue();
 
-		snprintf(buffer, bufferLength, "<-----%i----->\n\r", cycles);
+		snprintf(buffer, messageLength, "<-----%i----->\n\r", cycles);
 		sendSerialMessage(&buffer);
-		snprintf(buffer, bufferLength, "%i : Left\n\r", RPMOut[0]);
+		snprintf(buffer, messageLength, "%i : Left\n\r", RPMOut[0]);
 		sendSerialMessage(&buffer);
-		snprintf(buffer, bufferLength, "%i : Right\n\r", RPMOut[1]);
+		snprintf(buffer, messageLength, "%i : Right\n\r", RPMOut[1]);
 		sendSerialMessage(&buffer);
 		cycles == 100 ? cycles = 0 : cycles++;
-		HAL_Delay(1000);
+		HAL_Delay(100);
 
 		/* USER CODE END WHILE */
 
@@ -174,6 +177,48 @@ void SystemClock_Config(void) {
 }
 
 /**
+ * @brief TIM3 Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_TIM3_Init(void) {
+
+	/* USER CODE BEGIN TIM3_Init 0 */
+
+	/* USER CODE END TIM3_Init 0 */
+
+	TIM_ClockConfigTypeDef sClockSourceConfig = { 0 };
+	TIM_MasterConfigTypeDef sMasterConfig = { 0 };
+
+	/* USER CODE BEGIN TIM3_Init 1 */
+
+	/* USER CODE END TIM3_Init 1 */
+	htim3.Instance = TIM3;
+	htim3.Init.Prescaler = 4;
+	htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+	htim3.Init.Period = 65535;
+	htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+	htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+	if (HAL_TIM_Base_Init(&htim3) != HAL_OK) {
+		Error_Handler();
+	}
+	sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+	if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK) {
+		Error_Handler();
+	}
+	sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+	if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig)
+			!= HAL_OK) {
+		Error_Handler();
+	}
+	/* USER CODE BEGIN TIM3_Init 2 */
+
+	/* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
  * @brief TIM6 Initialization Function
  * @param None
  * @retval None
@@ -188,7 +233,7 @@ static void MX_TIM6_Init(void) {
 
 	/* USER CODE END TIM6_Init 1 */
 	htim6.Instance = TIM6;
-	htim6.Init.Prescaler = 0;
+	htim6.Init.Prescaler = 4;
 	htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
 	htim6.Init.Period = 65535;
 	htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -216,7 +261,7 @@ static void MX_TIM7_Init(void) {
 
 	/* USER CODE END TIM7_Init 1 */
 	htim7.Instance = TIM7;
-	htim7.Init.Prescaler = 0;
+	htim7.Init.Prescaler = 4;
 	htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
 	htim7.Init.Period = 65535;
 	htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -303,7 +348,9 @@ static void MX_GPIO_Init(void) {
 
 /* USER CODE BEGIN 4 */
 void sendSerialMessage(char *message) {
-	HAL_UART_Transmit(&huart2, message, bufferLength, 0xFFFF);
+	HAL_UART_Transmit(&huart2, (uint8_t*) message, messageLength, 0xFFFF);
+	//snprintf(message[0], messageLength, "");
+	//memset(message[0], 0, messageLength);
 }
 /**
  * @brief This function slides the WSSSlidingBuffer to the right and fills a new value into [0]
@@ -333,6 +380,9 @@ void incrementTimerExtension(uint8_t wheel) {
  * @retval Nones
  */
 void calculateRPMValue() {
+	RPMOut[0] = 0;
+	RPMOut[1] = 0;
+
 	for (int i = 0; i <= RelevantMeasuringPoints; i++) {		//AvgTime
 		RPMOut[0] = RPMOut[0] + WSSSlidingBuffer[0][i];
 		RPMOut[1] = RPMOut[1] + WSSSlidingBuffer[1][i];
@@ -343,6 +393,7 @@ void calculateRPMValue() {
 	RPMOut[0] = (1 / MeasuringPointsPrescaler)//How much of one Rotation are we speaking
 	/ (RPMOut[0] * (SystemCoreClock/* Prescaler*/) / 60);//Translate time units to minutes //todo
 }
+
 /* USER CODE END 4 */
 
 /**

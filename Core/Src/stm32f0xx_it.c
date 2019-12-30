@@ -171,7 +171,6 @@ void TIM3_IRQHandler(void) {
 void TIM6_IRQHandler(void) {
 	/* USER CODE BEGIN TIM6_IRQn 0 */
 	__HAL_TIM_SET_COUNTER(&htim6, 0);
-	incrementTimerExtension(0);
 	/* USER CODE END TIM6_IRQn 0 */
 	HAL_TIM_IRQHandler(&htim6);
 	/* USER CODE BEGIN TIM6_IRQn 1 */
@@ -185,7 +184,6 @@ void TIM6_IRQHandler(void) {
 void TIM7_IRQHandler(void) {
 	/* USER CODE BEGIN TIM7_IRQn 0 */
 	__HAL_TIM_SET_COUNTER(&htim7, 0);
-	incrementTimerExtension(1);
 	/* USER CODE END TIM7_IRQn 0 */
 	HAL_TIM_IRQHandler(&htim7);
 	/* USER CODE BEGIN TIM7_IRQn 1 */

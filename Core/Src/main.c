@@ -36,7 +36,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define MeasuringPoints				0x06 //per wheel
-#define MeasuringPointsPrescaler	0x01
+#define MeasuringPointsPrescaler	0x02 // must evenly divide Measunring points
 #define RelevantMeasuringPoints		(MeasuringPoints / MeasuringPointsPrescaler) //with how many points should the RPM be calculated
 //telemetry
 #define messageLength				30
@@ -47,7 +47,6 @@
 double pow(double, double);
 void sendSerialMessage(char*);
 void setWSSSlidingBuffer(uint8_t, uint16_t);
-void incrementTimerExtension(uint8_t);
 void calculateRPMValue();
 /* USER CODE END PM */
 
@@ -60,10 +59,9 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 int activityIndicator = 0;
-uint8_t TimerExtension[2]; //counts Timer Overflows
 uint16_t TimerSize = (uint16_t) pow(2, 16); //set to timer size
-uint16_t WSSSlidingBuffer[2][RelevantMeasuringPoints]; //[Wheel][time between points]
-uint16_t RPMOut[2] = { 0, 0 }; //[Wheel]
+uint32_t WSSSlidingBuffer[2][RelevantMeasuringPoints]; //[Wheel][time between points]
+uint32_t RPMOut[2] = { 0, 0 }; //[Wheel]
 char buffer[messageLength]; //buffer for concatenation of chars
 /* USER CODE END PV */
 
@@ -124,16 +122,8 @@ int main(void) {
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
-	sendSerialMessage("<-----Startup----->\n\r");
 	while (1) {
 		calculateRPMValue();
-
-		snprintf(buffer, messageLength, "<-----%i----->\n\r", cycles);
-		sendSerialMessage(&buffer);
-		snprintf(buffer, messageLength, "%i : Left\n\r", RPMOut[0]);
-		sendSerialMessage(&buffer);
-		snprintf(buffer, messageLength, "%i : Right\n\r", RPMOut[1]);
-		sendSerialMessage(&buffer);
 		cycles == 100 ? cycles = 0 : cycles++;
 		HAL_Delay(100);
 
@@ -194,7 +184,7 @@ static void MX_TIM3_Init(void) {
 
 	/* USER CODE END TIM3_Init 1 */
 	htim3.Instance = TIM3;
-	htim3.Init.Prescaler = 4;
+	htim3.Init.Prescaler = 16;
 	htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
 	htim3.Init.Period = 65535;
 	htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -233,7 +223,7 @@ static void MX_TIM6_Init(void) {
 
 	/* USER CODE END TIM6_Init 1 */
 	htim6.Instance = TIM6;
-	htim6.Init.Prescaler = 4;
+	htim6.Init.Prescaler = 16;
 	htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
 	htim6.Init.Period = 65535;
 	htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -261,7 +251,7 @@ static void MX_TIM7_Init(void) {
 
 	/* USER CODE END TIM7_Init 1 */
 	htim7.Instance = TIM7;
-	htim7.Init.Prescaler = 4;
+	htim7.Init.Prescaler = 16;
 	htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
 	htim7.Init.Period = 65535;
 	htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -347,11 +337,6 @@ static void MX_GPIO_Init(void) {
 }
 
 /* USER CODE BEGIN 4 */
-void sendSerialMessage(char *message) {
-	HAL_UART_Transmit(&huart2, (uint8_t*) message, messageLength, 0xFFFF);
-	//snprintf(message[0], messageLength, "");
-	//memset(message[0], 0, messageLength);
-}
 /**
  * @brief This function slides the WSSSlidingBuffer to the right and fills a new value into [0]
  * @param wheel: 0=>left; 1=> right
@@ -362,17 +347,7 @@ void setWSSSlidingBufferVal(uint8_t wheel, uint16_t NewVal) {
 	for (int i = RelevantMeasuringPoints; i > 0; i--) {
 		WSSSlidingBuffer[wheel][i] = WSSSlidingBuffer[wheel][i + 1];
 	}
-	WSSSlidingBuffer[wheel][0] = NewVal + (TimerExtension[wheel] * TimerSize);
-	TimerExtension[wheel] = 0;
-}
-
-/**
- * @brief This function increments the Timer Extension for a give wheel
- * @param wheel: 0=>left; 1=> right
- * @retval None
- */
-void incrementTimerExtension(uint8_t wheel) {
-	TimerExtension[wheel]++;
+	WSSSlidingBuffer[wheel][0] = NewVal;
 }
 
 /**
@@ -391,7 +366,9 @@ void calculateRPMValue() {
 	RPMOut[1] = RPMOut[1] / RelevantMeasuringPoints;
 
 	RPMOut[0] = (1 / MeasuringPointsPrescaler)//How much of one Rotation are we speaking
-	/ (RPMOut[0] * (SystemCoreClock/* Prescaler*/) / 60);//Translate time units to minutes //todo
+	/ (RPMOut[0] * (SystemCoreClock / 4) / 60);	//Translate time units to minutes //todo
+	RPMOut[1] = ((RPMOut[1] * (SystemCoreClock / 4) / 60)
+			/ MeasuringPointsPrescaler);
 }
 
 /* USER CODE END 4 */

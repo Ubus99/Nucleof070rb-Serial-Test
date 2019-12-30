@@ -37,7 +37,8 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+void setWSSSlidingBufferVal();
+void incrementTimerExtension();
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -83,7 +84,6 @@ void NMI_Handler(void) {
  */
 void HardFault_Handler(void) {
 	/* USER CODE BEGIN HardFault_IRQn 0 */
-	//sendSerialMessage("Hard_Error\n\r");
 	/* USER CODE END HardFault_IRQn 0 */
 	while (1) {
 		/* USER CODE BEGIN W1_HardFault_IRQn 0 */
@@ -140,13 +140,13 @@ void SysTick_Handler(void) {
  */
 void EXTI4_15_IRQHandler(void) {
 	/* USER CODE BEGIN EXTI4_15_IRQn 0 */
-	//HAL_TIM_Base_Stop(&htim6);
-	//setWSSSlidingBufferVal(0, __HAL_TIM_GET_COUNTER(&htim6));
+	HAL_TIM_Base_Stop(&htim6);
+	setWSSSlidingBufferVal(0, __HAL_TIM_GET_COUNTER(&htim6));
 	/* USER CODE END EXTI4_15_IRQn 0 */
 	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
 	/* USER CODE BEGIN EXTI4_15_IRQn 1 */
-	//__HAL_TIM_SET_COUNTER(&htim6, 0);
-	//HAL_TIM_Base_Start_IT(&htim6);
+	__HAL_TIM_SET_COUNTER(&htim6, 0);
+	HAL_TIM_Base_Start_IT(&htim6);
 	/* USER CODE END EXTI4_15_IRQn 1 */
 }
 
@@ -155,11 +155,13 @@ void EXTI4_15_IRQHandler(void) {
  */
 void TIM3_IRQHandler(void) {
 	/* USER CODE BEGIN TIM3_IRQn 0 */
-	setWSSSlidingBufferVal(0, __HAL_TIM_GET_COUNTER(&htim6));
+	HAL_TIM_Base_Stop(&htim7);
+	setWSSSlidingBufferVal(1, __HAL_TIM_GET_COUNTER(&htim7));
 	/* USER CODE END TIM3_IRQn 0 */
 	HAL_TIM_IRQHandler(&htim3);
 	/* USER CODE BEGIN TIM3_IRQn 1 */
-	__HAL_TIM_SET_COUNTER(&htim6, 0);
+	__HAL_TIM_SET_COUNTER(&htim7, 0);
+	HAL_TIM_Base_Start_IT(&htim7);
 	/* USER CODE END TIM3_IRQn 1 */
 }
 
@@ -182,7 +184,7 @@ void TIM6_IRQHandler(void) {
  */
 void TIM7_IRQHandler(void) {
 	/* USER CODE BEGIN TIM7_IRQn 0 */
-	__HAL_TIM_SET_COUNTER(&htim6, 1);
+	__HAL_TIM_SET_COUNTER(&htim7, 0);
 	incrementTimerExtension(1);
 	/* USER CODE END TIM7_IRQn 0 */
 	HAL_TIM_IRQHandler(&htim7);
